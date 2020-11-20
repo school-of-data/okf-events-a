@@ -1,6 +1,6 @@
 ---
 layout: event
-title: An OKF event
+title: Learning to do a thing
 permalink: /firstpage/
 ---
 
@@ -8,11 +8,19 @@ permalink: /firstpage/
 
 Progress:
 
-- tabletop js loads
+- tabletop js loads *bug* link to JS breaks in GitHub so the rest of this is moot
 - in-page script initialises
 - data loads from spreadsheet
 - data assigns to model
 - raw data assigns to innerHTML
+
+TODO
+- explore formatting in sheets and transport integrity 
+- assign js model data to Liquid variables
+- make it look right
+- productionise to templates and content instances
+- front page
+- nav
 
 <script type='text/javascript'>    
   var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing';
@@ -54,6 +62,7 @@ Progress:
   window.addEventListener('DOMContentLoaded', init)
 </script>
 <h2>Here's the data</h2>
+<p>(works locally: no data currently rendered in github page version)
 <p id="event_title"></p>
 <p id="event_startdate"></p>
 <p id="event_enddate"></p>
