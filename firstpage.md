@@ -8,7 +8,7 @@ permalink: /firstpage/
 
 Progress:
 
-- tabletop js loads *bug* link to JS breaks in GitHub so the rest of this is moot
+- tabletop js loads
 - in-page script initialises
 - data loads from spreadsheet
 - data assigns to model
@@ -39,6 +39,7 @@ TODO
   function showInfo(data, tabletop)  {
     data.forEach(function(data) {
       event_title.innerHTML = data.event_title;
+      // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
       event_startdate.innerHTML = data.event_startdate;
       event_enddate.innerHTML = data.event_enddate;
       event_timing.innerHTML = data.event_timing;
@@ -61,16 +62,15 @@ TODO
 
   window.addEventListener('DOMContentLoaded', init)
 </script>
-<h2>Here's the data</h2>
-<p>(works locally: no data currently rendered in github page version)
-<p id="event_title"></p>
-<p id="event_startdate"></p>
+<p>Here's the data</p>
+<h2 id="event_title"></h2>
+<p><strong id="event_summary"></strong></p>
+<p>This event starts on <span id="event_startdate"></span></p>
+// hide end date if empty
 <p id="event_enddate"></p>
 <p id="event_timing"></p>
 <p id="Event_location"></p>
-<p id="event_livestreamshow"></p>
-<p id="event_livestream"></p>
-<p id="event_summary"></p>
+<p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL <span id="event_livestreamshow"></span>: <span id="event_livestream"></span></p>
 <p id="event_prerequisites"></p>
 <p id="event_facilitators"></p>
 <p id="event_access"></p>
