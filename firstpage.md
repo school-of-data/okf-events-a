@@ -55,8 +55,11 @@ TODO
       event_agendashow.innerHTML = data.event_agendashow;
       event_agenda.innerHTML = data.event_agenda;
       event_liveresources.innerHTML = data.event_liveresources;
-      event_washupshow.innerHTML = data.event_washupshow;
-      event_washupshow.innerHTML = data.event_washupshow;
+      if (data.event_washupshow = "TRUE") {
+          event_washup.innerHTML = data.event_washup;
+          } else {
+          document.getElementById("retro").style.display = "none";
+          }     
  });
     }
 
@@ -70,14 +73,26 @@ TODO
 <p id="event_enddate"></p>
 <p id="event_timing"></p>
 <p id="Event_location"></p>
-<p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL <span id="event_livestreamshow"></span>: <span id="event_livestream"></span></p>
+<p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL, and in this case the 'embed' code copied from YouTube and pasted to the spreadsheet cell, so an iframe. <span id="event_livestreamshow"></span>: <br/>
+<span id="event_livestream"></span></p>
+<h3>Prerequisites</h3>
 <p id="event_prerequisites"></p>
+<h3>Facilitators</h3>
 <p id="event_facilitators"></p>
+<h3>Access</h3>
 <p id="event_access"></p>
 <p id="event_language"></p>
+<h3>Preparation</h3>
+<p>To prepare for this event you should review these materials:</p>
 <p id="event_preparation"></p>
+<h3>Agenda</h3>
 <p id="event_agendashow"></p>
 <p id="event_agenda"></p>
+<h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
+<div id="retro">
+<h3>Event retro</h3>
 <p id="event_washupshow"></p>
 <p id="event_washup"></p>
+</div>
+
