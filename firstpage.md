@@ -13,10 +13,10 @@ Progress:
 - data loads from spreadsheet
 - data assigns to model
 - raw data assigns to innerHTML
+- explore formatting in sheets and transport integrity 
+- assign js model data to Liquid variables (can't: Liquid processing precedes JS execution. Is possible to add extra processing step, import sheet data to static JSON file in GitHub backend and process on page via Liquid operations, but adds complexity to no great obvious benefit).
 
 TODO
-- explore formatting in sheets and transport integrity 
-- assign js model data to Liquid variables
 - make it look right
 - productionise to templates and content instances
 - front page
@@ -90,9 +90,9 @@ TODO
 <p id="event_agenda"></p>
 <h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
+<p id="event_washupshow"></p>
 <div id="retro">
 <h3>Event retro</h3>
-<p id="event_washupshow"></p>
 <p id="event_washup"></p>
 </div>
 
