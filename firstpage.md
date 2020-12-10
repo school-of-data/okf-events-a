@@ -38,23 +38,36 @@ TODO
 
   function showInfo(data, tabletop)  {
     data.forEach(function(data) {
-      event_title.innerHTML = data.event_title;
       // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
-      event_startdate.innerHTML = data.event_startdate;
-      event_enddate.innerHTML = data.event_enddate;
-      event_timing.innerHTML = data.event_timing;
-      Event_location.innerHTML = data.Event_location;
-      event_livestreamshow.innerHTML = data.event_livestreamshow;
-      event_livestream.innerHTML = data.event_livestream;
-      event_summary.innerHTML = data.event_summary;
-      event_prerequisites.innerHTML = data.event_prerequisites;
-      event_facilitators.innerHTML = data.event_facilitators;
       event_access.innerHTML = data.event_access;
-      event_language.innerHTML = data.event_language;
-      event_preparation.innerHTML = data.event_preparation;
+      event_agenda.innerHTML = data.event_agenda;
       event_agendashow.innerHTML = data.event_agendashow;
       event_agenda.innerHTML = data.event_agenda;
+      event_background.innerHTML = data.event_background;
+      event_childcare.innerHTML = data.event_childcare;
+      event_codeofconduct.innerHTML = data.event_codeofconduct;
+      event_costs.innerHTML = data.event_costs
+      event_enddate.innerHTML = data.event_enddate;
+      event_facilitators.innerHTML = data.event_facilitators;
+      event_language.innerHTML = data.event_language;
       event_liveresources.innerHTML = data.event_liveresources;
+      event_livestream.innerHTML = data.event_livestream;
+      event_livestreamshow.innerHTML = data.event_livestreamshow;
+      event_location.innerHTML = data.event_location;
+      event_organiser.innerHTML = data.event_organiser;
+      event_outputs.innerHTML = data.event_outputs;
+      event_preparation.innerHTML = data.event_preparation;
+      event_prerequisites.innerHTML = data.event_prerequisites;
+      event_presurvey.innerHTML = data.event_presurvey;
+      event_presurveyshow.innerHTML = data.presurveyshow;
+      event_postsurvey.innerHTML = data.event_postsurvey;
+      event_postsurveyshow.innerHTML = data.event_postsurveyshow;
+      event_series.innerHTML = data.event_series;
+      event_startdate.innerHTML = data.event_startdate;
+      event_structure.innerHTML = data.event_structure;
+      event_summary.innerHTML = data.event_summary;
+      event_timing.innerHTML = data.event_timing;
+      event_title.innerHTML = data.event_title;
       if (data.event_washupshow = "TRUE") {
           event_washup.innerHTML = data.event_washup;
           } else {
@@ -72,7 +85,7 @@ TODO
 // hide end date if empty
 <p id="event_enddate"></p>
 <p id="event_timing"></p>
-<p id="Event_location"></p>
+<p id="event_location"></p>
 <p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL, and in this case the 'embed' code copied from YouTube and pasted to the spreadsheet cell, so an iframe. <span id="event_livestreamshow"></span>: <br/>
 <span id="event_livestream"></span></p>
 <h3>Prerequisites</h3>
@@ -90,7 +103,6 @@ TODO
 <p id="event_agenda"></p>
 <h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
-<p id="event_washupshow"></p>
 <div id="retro">
 <h3>Event retro</h3>
 <p id="event_washup"></p>
