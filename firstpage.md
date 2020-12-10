@@ -43,7 +43,7 @@ TODO
       event_agenda.innerHTML = data.event_agenda;
       event_agendashow.innerHTML = data.event_agendashow;
       event_agenda.innerHTML = data.event_agenda;
-      event_background.innerHTML = data.event_background;
+//      event_background.innerHTML = data.event_background;
       event_childcare.innerHTML = data.event_childcare;
       event_codeofconduct.innerHTML = data.event_codeofconduct;
       event_costs.innerHTML = data.event_costs
@@ -84,6 +84,7 @@ TODO
 <p>This event starts on <span id="event_startdate"></span></p>
 // hide end date if empty
 <p id="event_enddate"></p>
+<div id="event_background"></div>
 <div id="retro">
 <h3>Event retro</h3>
 <p id="event_washup"></p>
