@@ -42,8 +42,7 @@ TODO
       event_access.innerHTML = data.event_access;
       event_agenda.innerHTML = data.event_agenda;
       event_agendashow.innerHTML = data.event_agendashow;
-      event_agenda.innerHTML = data.event_agenda;
-//      event_background.innerHTML = data.event_background;
+      event_background.innerHTML = data.event_background;
       event_childcare.innerHTML = data.event_childcare;
       event_codeofconduct.innerHTML = data.event_codeofconduct;
       event_costs.innerHTML = data.event_costs
