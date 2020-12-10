@@ -31,10 +31,10 @@ TODO
                      simpleSheet: true } )
   }
 
-//  function showInfo(data, tabletop) {
-//    alert('Successfully processed!')
-//    console.log(data);
-//  }
+  function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+  }
 
   function showInfo(data, tabletop)  {
     data.forEach(function(data) {
