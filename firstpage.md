@@ -45,7 +45,7 @@ TODO
       event_background.innerHTML = data.event_background;
       event_childcare.innerHTML = data.event_childcare;
       event_codeofconduct.innerHTML = data.event_codeofconduct;
-      event_costs.innerHTML = data.event_costs
+      event_costs.innerHTML = data.event_costs;
       event_enddate.innerHTML = data.event_enddate;
       event_facilitators.innerHTML = data.event_facilitators;
       event_language.innerHTML = data.event_language;
