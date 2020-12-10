@@ -84,6 +84,10 @@ TODO
 <p>This event starts on <span id="event_startdate"></span></p>
 // hide end date if empty
 <p id="event_enddate"></p>
+<div id="retro">
+<h3>Event retro</h3>
+<p id="event_washup"></p>
+</div>
 <p id="event_timing"></p>
 <p id="event_location"></p>
 <p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL, and in this case the 'embed' code copied from YouTube and pasted to the spreadsheet cell, so an iframe. <span id="event_livestreamshow"></span>: <br/>
@@ -103,8 +107,4 @@ TODO
 <p id="event_agenda"></p>
 <h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
-<div id="retro">
-<h3>Event retro</h3>
-<p id="event_washup"></p>
-</div>
 
