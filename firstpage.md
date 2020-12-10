@@ -107,4 +107,5 @@ TODO
 <p id="event_agenda"></p>
 <h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
+<p><strong>Childcare</strong><span id="event_childcare"></span></p>
 
