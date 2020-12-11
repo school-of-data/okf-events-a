@@ -105,7 +105,22 @@ TODO
 <h3>Agenda</h3>
 <p id="event_agendashow"></p>
 <p id="event_agenda"></p>
+<p><strong>Structure: </strong><span id="event_structure"></span></p>
 <h3>Prompts during the event</h3>
 <p id="event_liveresources"></p>
-<p><strong>Childcare</strong><span id="event_childcare"></span></p>
+<p><strong>Childcare: </strong><span id="event_childcare"></span></p>
+<p><strong>Code of conduct: </strong><span id="event_codeofconduct"></span></p>
+<p><strong>Costs: </strong><span id="event_costs"></span></p>
+<p><strong>Facilitators: </strong><span id="event_facilitators"></span></p>
+<p><strong>Organiser: </strong><span id="event_organiser"></span></p>
+<p><strong>Outputs: </strong><span id="event_outputs"></span></p>
+<p><strong>Presurvey: </strong><span id="event_presurvey"></span></p>
+<p><strong>Presurvey show: </strong><span id="event_presurveyshow"></span></p>
+<p><strong>Postsurvey: </strong><span id="event_postsurvey"></span></p>
+<p><strong>Postsurvey show: </strong><span id="event_postsurveyshow"></span></p>
+<p><strong>Series: </strong><span id="event_series"></span></p>
+
+
+
+
 
