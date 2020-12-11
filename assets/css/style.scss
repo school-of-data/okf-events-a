@@ -19,6 +19,24 @@ body {
     background-color: #fff;
 }
 
+.page-header {
+    height: 120px;
+    color: #000000;
+    text-align: left;
+    background-color: #ffffff;
+    background-image: none;
+}
+
+.header-logo svg {
+    width: 15rem;
+    height: 100%;
+}
+
+.page-name {
+    font-size: 2rem;
+    margin: 3rem 0 0 40%;
+}
+
 .site-footer {
     color: rgba(0,0,0,.6);
     padding: 3rem 0 2rem;

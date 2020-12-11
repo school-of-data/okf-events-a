@@ -15,6 +15,7 @@ Progress:
 - raw data assigns to innerHTML
 - explore formatting in sheets and transport integrity 
 - assign js model data to Liquid variables (can't: Liquid processing precedes JS execution. Is possible to add extra processing step, import sheet data to static JSON file in GitHub backend and process on page via Liquid operations, but adds complexity to no great obvious benefit).
+- align to MVP-spedified content fields
 
 TODO
 - make it look right
