@@ -120,7 +120,10 @@ TODO
 <p><strong>Postsurvey show: </strong><span id="event_postsurveyshow"></span></p>
 <p><strong>Series: </strong><span id="event_series"></span></p>
 
-
+<h3>Script test</h3>
+<p>Arabic: <span>سيتم توفير الترجمة الفورية من خلال سماعات الرأس للمندوبين الذين يحضرون شخصيًا.</span></p>
+<p>Amharic: <span>በአካል ተገኝተው ለሚሳተፉ ልዑካን በአንድ ጊዜ ትርጉም በጆሮ ማዳመጫ በኩል ይሰጣል ፡፡</span></p>
+<p>Japanese: <span>直接出席している代表者には、ヘッドホンを介して同時通訳が提供されます。</span></p>
 
 
 
