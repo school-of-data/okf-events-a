@@ -19,4 +19,45 @@ body {
     background-color: #fff;
 }
 
-@include footer
+.site-footer {
+    color: rgba(0,0,0,.6);
+    padding: 3rem 0 2rem;
+    font-size: .875rem;
+    margin-top: 3rem;
+}
+
+.site-footer, html {
+    background-color: #f6f6f6;
+}
+
+.site-footer .footer-primary {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: enter;
+}
+
+.site-footer .footer-secondary {
+    font-size: .75rem;
+    border-top: 2px solid rgba(0,0,0,.4);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+.site-footer .footer-primary .footer-logo svg {
+    width: 10.5rem;
+}
+
+.site-footer .license {
+    float: left;
+    margin-right: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.site-footer a {
+    color: rgba(0,0,0,.9);
+    box-shadow: none;
+}
