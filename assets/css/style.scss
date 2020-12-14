@@ -19,22 +19,39 @@ body {
     background-color: #fff;
 }
 
+#skip-to-content {
+    height: 1px;
+    margin: -1px;
+    font-size: 1px;
+}
+
 .page-header {
-    height: 120px;
     color: #000000;
     text-align: left;
     background-color: #ffffff;
     background-image: none;
+    padding: 2rem 6rem;
 }
 
-.header-logo svg {
-    width: 15rem;
-    height: 100%;
+.page-header .header-logo svg {
+    width: 270px;
 }
 
 .page-name {
     font-size: 2rem;
-    margin: 3rem 0 0 40%;
+    font-weight: 900;
+    padding: 3rem 0 0 0;
+    margin: 0;
+}
+
+.page-subtitle {
+    font-weight: 400;
+}
+
+.main-content {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0;
 }
 
 .site-footer {
@@ -78,4 +95,44 @@ body {
 .site-footer a {
     color: rgba(0,0,0,.9);
     box-shadow: none;
+}
+
+/* Events summary/listing page */
+
+.event-panel {
+    display: block;
+    padding: 1.5rem;
+    background-color: #D1F7FF;
+    margin: 2rem 0;
+}
+
+.event-panel p {
+    margin: 1rem 0 0 0;
+}
+.event-panel-title {
+    font-size: 24pt;
+}
+.event-panel-seriestitle {
+
+}
+
+.event-panel-eventtitle {
+    font-weight: 900;
+}
+
+.event-panel-date {
+
+}
+
+.event-panel-location {
+    font-weight: 700;
+}
+
+.event-panel-details-button , .event-panel-all-events {
+     background-color: #00D1FF;
+     padding: 1rem;
+     color: #ffffff;
+     font-weight: 700;
+     margin: 1rem 1rem 1rem 0;
+     display: inline-block;
 }

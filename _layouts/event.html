@@ -17,6 +17,61 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script type='text/javascript'>    
+      var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing';
+    
+      function init() {
+        Tabletop.init( { key: publicSpreadsheetUrl,
+                         callback: showInfo,
+                         simpleSheet: true } )
+      }
+    
+      function showInfo(data, tabletop) {
+        alert('Successfully processed!')
+        console.log(data);
+      }
+    
+      function showInfo(data, tabletop)  {
+        data.forEach(function(data) {
+          // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
+          event_access.innerHTML = data.event_access;
+          event_agenda.innerHTML = data.event_agenda;
+          event_agendashow.innerHTML = data.event_agendashow;
+          event_background.innerHTML = data.event_background;
+          event_childcare.innerHTML = data.event_childcare;
+          event_codeofconduct.innerHTML = data.event_codeofconduct;
+          event_costs.innerHTML = data.event_costs;
+          event_enddate.innerHTML = data.event_enddate;
+          event_facilitators.innerHTML = data.event_facilitators;
+          event_language.innerHTML = data.event_language;
+          event_liveresources.innerHTML = data.event_liveresources;
+          event_livestream.innerHTML = data.event_livestream;
+          event_livestreamshow.innerHTML = data.event_livestreamshow;
+          event_location.innerHTML = data.event_location;
+          event_organiser.innerHTML = data.event_organiser;
+          event_outputs.innerHTML = data.event_outputs;
+          event_preparation.innerHTML = data.event_preparation;
+          event_prerequisites.innerHTML = data.event_prerequisites;
+          event_presurvey.innerHTML = data.event_presurvey;
+          event_presurveyshow.innerHTML = data.presurveyshow;
+          event_postsurvey.innerHTML = data.event_postsurvey;
+          event_postsurveyshow.innerHTML = data.event_postsurveyshow;
+          event_series.innerHTML = data.event_series;
+          event_startdate.innerHTML = data.event_startdate;
+          event_structure.innerHTML = data.event_structure;
+          event_summary.innerHTML = data.event_summary;
+          event_timing.innerHTML = data.event_timing;
+          event_title.innerHTML = data.event_title;
+          if (data.event_washupshow = "TRUE") {
+              event_washup.innerHTML = data.event_washup;
+              } else {
+              document.getElementById("retro").style.display = "none";
+              }     
+     });
+        }
+    
+      window.addEventListener('DOMContentLoaded', init)
+    </script>
   </head>
   <body id="okf-events-a">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
