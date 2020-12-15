@@ -110,18 +110,29 @@ body {
     background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: .5rem;
+.main-content h1, .main-content h2, .main-content h3, .main-content h4 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    color: #231f20;
     font-weight: 900;
     line-height: 1.2;
 }
 
 .main-content h1 {
-    margin-bottom: 1rem;
-    margin-top: 0;
-    color: #231f20;
-    font-weight: 900;
+    font-size: 2.5rem;
 }
+
+.main-content h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.main-content h3 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 
 /* Key info panel */
 
@@ -131,12 +142,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 40%;
     padding: 1rem;
     margin-left: 1rem;
-    background-color: #00d1ff;
+    background-color: #d1f7ff;
 }
 
-.event-details-key-info-panel h3 {
-    color: #ffffff;
+.main-content .event-details-key-info-panel h3 {
+    background-color: #00d1ff;
+    color: #000000;
     font-weight: 900;
+    margin: -1rem -1rem 0 -1rem;
+    padding: 0.5rem 1rem;
 }
 
 
@@ -171,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.event-panel-details-button , .event-panel-all-events {
+.event-panel-details-button, .event-panel-all-events {
      background-color: #00D1FF;
      padding: 1rem;
      color: #ffffff;
