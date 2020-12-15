@@ -4,7 +4,7 @@ This project starts with a framework of GitHub pages, Jekyll/Liquid for templati
 
 <div class="event-panel">
 <p class="event-panel-title"><span class="event-panel-seriestitle">Data fundamentals</span> | 
-<span class="event-panel-eventtitle">What is Data?</span></p>
+<span class="event-panel-eventtitle"><a href="#">What is Data?</a></span></p>
 <p>
 <span class="event-panel-date">24 January 2020</span>
 <span class="event-panel-location">Berlin and online</span>

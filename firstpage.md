@@ -1,44 +1,28 @@
 ---
 layout: event
-title: Learning to do a thing
-series: What is Data?
+title: 
+description: "A course from Open Knowledge Foundation"
 permalink: /firstpage/
 publicSpreadsheetURL: https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing
 ---
 
-# Liquid and markdown and tabletop
-
-Progress:
-
-- tabletop js loads
-- in-page script initialises
-- data loads from spreadsheet
-- data assigns to model
-- raw data assigns to innerHTML
-- explore formatting in sheets and transport integrity 
-- assign js model data to Liquid variables (can't: Liquid processing precedes JS execution. Is possible to add extra processing step, import sheet data to static JSON file in GitHub backend and process on page via Liquid operations, but adds complexity to no great obvious benefit).
-- align to MVP-spedified content fields
-
-TODO
-- make it look right
-- productionise to templates and content instances
-- front page
-- nav
 
 
-<p>Here's the data</p>
-<h2 id="event_title"></h2>
+<h1 id="event_title"></h1>
 <p><strong id="event_summary"></strong></p>
+<div class="event-details-key-info-panel">
+<h3>Key information</h3>
 <p>This event starts on <span id="event_startdate"></span></p>
 // hide end date if empty
-<p id="event_enddate"></p>
+<p class="event-end-date"><strong>End date</strong><span id="event_enddate"></span></p>
+<p class="event-timing"><strong>Event timing</strong><span id="event_timing"></span></p>
+<p id="event_location"></p>
+</div>
 <div id="event_background"></div>
 <div id="retro">
 <h3>Event retro</h3>
 <p id="event_washup"></p>
 </div>
-<p id="event_timing"></p>
-<p id="event_location"></p>
 <p>event_livestreamshow, boolean to control display of livestream link, currently assumed to be a URL, and in this case the 'embed' code copied from YouTube and pasted to the spreadsheet cell, so an iframe. <span id="event_livestreamshow"></span>: <br/>
 <span id="event_livestream"></span></p>
 <h3>Prerequisites</h3>
@@ -68,6 +52,7 @@ TODO
 <p><strong>Postsurvey: </strong><span id="event_postsurvey"></span></p>
 <p><strong>Postsurvey show: </strong><span id="event_postsurveyshow"></span></p>
 <p><strong>Series: </strong><span id="event_series"></span></p>
+<p><strong>Washup: </strong><span id="event_washup"></span></p>
 
 <h3>Script test</h3>
 <p>Arabic: <span>سيتم توفير الترجمة الفورية من خلال سماعات الرأس للمندوبين الذين يحضرون شخصيًا.</span></p>

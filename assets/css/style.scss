@@ -97,6 +97,49 @@ body {
     box-shadow: none;
 }
 
+/* Basic typography */
+
+body {
+    margin: 0;
+    font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #231f20;
+    text-align: left;
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.main-content h1 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    color: #231f20;
+    font-weight: 900;
+}
+
+/* Key info panel */
+
+.event-details-key-info-panel {
+    display: block;
+    float: right;
+    width: 40%;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: #00d1ff;
+}
+
+.event-details-key-info-panel h3 {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
 /* Events summary/listing page */
 
 .event-panel {
