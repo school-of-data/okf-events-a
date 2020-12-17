@@ -35,13 +35,28 @@
         data.forEach(function(data) {
           // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
           event_access.innerHTML = data.event_access;
-          event_agenda.innerHTML = data.event_agenda;
-          event_agendashow.innerHTML = data.event_agendashow;
-          event_background.innerHTML = data.event_background;
-          event_childcare.innerHTML = data.event_childcare;
-          event_codeofconduct.innerHTML = data.event_codeofconduct;
+          if (data.event_agendashow == "TRUE") {
+              event_agenda.innerHTML = data.event_agenda;
+              } else {
+              document.getElementById("event_agendashow").style.display = "none";
+              }
+          if (data.event_background > "") {
+              event_background.innerHTML = data.event_background;
+              }
+          if (data.event_childcare > "") {
+              event_childcare.innerHTML = data.event_childcare;
+              }
+          if (data.event_codeofconduct > "") {
+              event_codeofconduct.innerHTML = data.event_codeofconduct;
+              } else {
+              document.getElementById("event_codeofconductshow").style.display="none";
+              }
           event_costs.innerHTML = data.event_costs;
-          event_enddate.innerHTML = data.event_enddate;
+          if (data.event_enddate > "") {
+              event_enddate.innerHTML = data.event_enddate;
+              } else {
+              document.getElementById("event_enddateshow").style.display="none";
+              }
           event_facilitators.innerHTML = data.event_facilitators;
           event_language.innerHTML = data.event_language;
           event_liveresources.innerHTML = data.event_liveresources;
@@ -67,6 +82,8 @@
               }     
           if (data.event_series > '') {
             event_series.innerHTML = data.event_series;
+          } else {
+            event_series.innerHTML = "";
           }
           event_startdate.innerHTML = data.event_startdate;
           event_structure.innerHTML = data.event_structure;

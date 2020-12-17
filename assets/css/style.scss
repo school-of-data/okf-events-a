@@ -130,10 +130,16 @@ body {
 .main-content h3 {
     margin-top: 1.5rem;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
+/* Series link */
 
+.series {
+    display: inline-block;
+    background-color: #d1f7ff;
+    padding: 0.5rem;
+}
 /* Key info panel */
 
 .event-details-key-info-panel {
@@ -148,9 +154,10 @@ body {
 .main-content .event-details-key-info-panel h3 {
     background-color: #00d1ff;
     color: #000000;
+    font-size: 1.5rem;
     font-weight: 900;
     margin: -1rem -1rem 0 -1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
 }
 
 
