@@ -8,7 +8,7 @@ publicSpreadsheetURL: https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR
 
 
 <h1 id="event_title"></h1>
-<p class="series-title">A module in the  <span class="series"><a href="#"><span id="event_series"></span></a></span> series</p>
+<p class="series-title">A module in the  <span class="series"><a href="{{ site.baseurl }}/series-gis"><span id="event_series"></span></a></span> series</p>
 <p><strong id="event_summary"></strong>
 <p id="event_facilitators" class="facilitators"></p>
 <div id="event_livestreamshow">
