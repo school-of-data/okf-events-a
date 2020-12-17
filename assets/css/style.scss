@@ -37,6 +37,28 @@ body {
     width: 270px;
 }
 
+.primary-nav ul {
+    list-style: none;
+    display: block;
+    float: right;
+    font-size: 1.25rem;
+}
+
+.primary-nav li {
+    display: inline-block;
+    margin: 0 0 0 1rem;
+}
+
+.primary-nav a {
+    text-decoration: none;
+    color: #231f20;
+}
+
+.primary-nav a:hover {
+    text-decoration: none;
+    color: #231f20;
+}
+
 .page-name {
     font-size: 2rem;
     font-weight: 900;
@@ -47,6 +69,7 @@ body {
 .page-subtitle {
     font-weight: 400;
 }
+
 
 .main-content {
     max-width: 64rem;
