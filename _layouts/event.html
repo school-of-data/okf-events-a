@@ -85,6 +85,7 @@
           } else {
             event_series.innerHTML = "";
           }
+          
           event_startdate.innerHTML = data.event_startdate;
           event_structure.innerHTML = data.event_structure;
           event_summary.innerHTML = data.event_summary;
@@ -107,7 +108,7 @@
     {% include header.html %} 
     <main id="content" class="main-content" role="main">
       {{ content }}
-      {% include footer.html %}
     </main>
+    {% include footer.html %}
   </body>
 </html>
