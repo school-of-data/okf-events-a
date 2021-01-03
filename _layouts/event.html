@@ -1,114 +1,119 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script type='text/javascript'>    
-      var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing';
-    
-      function init() {
-        Tabletop.init( { key: publicSpreadsheetUrl,
-                         callback: showInfo,
-                         simpleSheet: true } )
-      }
-    
-      function showInfo(data, tabletop) {
-        alert('Successfully processed!')
-        console.log(data);
-      }
-    
-      function showInfo(data, tabletop)  {
-        data.forEach(function(data) {
-          // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
-          event_access.innerHTML = data.event_access;
-          if (data.event_agendashow == "TRUE") {
-              event_agenda.innerHTML = data.event_agenda;
-              } else {
-              document.getElementById("event_agendashow").style.display = "none";
-              }
-          if (data.event_background > "") {
-              event_background.innerHTML = data.event_background;
-              }
-          if (data.event_childcare > "") {
-              event_childcare.innerHTML = data.event_childcare;
-              }
-          if (data.event_codeofconduct > "") {
-              event_codeofconduct.innerHTML = data.event_codeofconduct;
-              } else {
-              document.getElementById("event_codeofconductshow").style.display="none";
-              }
-          event_costs.innerHTML = data.event_costs;
-          if (data.event_enddate > "") {
-              event_enddate.innerHTML = data.event_enddate;
-              } else {
-              document.getElementById("event_enddateshow").style.display="none";
-              }
-          event_facilitators.innerHTML = data.event_facilitators;
-          event_language.innerHTML = data.event_language;
-          event_liveresources.innerHTML = data.event_liveresources;
-          if (data.event_livestreamshow == "TRUE") {
-              event_livestream.innerHTML = data.event_livestream;
-              } else {
-              document.getElementById("event_livestreamshow").style.display = "none";
-              }     
-          event_location.innerHTML = data.event_location;
-          event_organiser.innerHTML = data.event_organiser;
-          event_outputs.innerHTML = data.event_outputs;
-          event_preparation.innerHTML = data.event_preparation;
-          event_prerequisites.innerHTML = data.event_prerequisites;
-          if (data.event_presurveyshow == "TRUE") {
-              event_presurvey.innerHTML = data.event_presurvey;
-              } else {
-              document.getElementById("event_presurveyshow").style.display = "none";
-              }     
-          if (data.event_postsurveyshow == "TRUE") {
-              event_postsurvey.innerHTML = data.event_postsurvey;
-              } else {
-              document.getElementById("event_postsurveyshow").style.display = "none";
-              }     
-          if (data.event_series > '') {
-            event_series.innerHTML = data.event_series;
-          } else {
-            event_series.innerHTML = "";
-          }
-          
-          event_startdate.innerHTML = data.event_startdate;
-          event_structure.innerHTML = data.event_structure;
-          event_summary.innerHTML = data.event_summary;
-          event_timing.innerHTML = data.event_timing;
-          event_title.innerHTML = data.event_title;
-          if (data.event_washupshow == "TRUE") {
-              event_washup.innerHTML = data.event_washup;
-              } else {
-              document.getElementById("retro").style.display = "none";
-              }     
-     });
-        }
-    
-      window.addEventListener('DOMContentLoaded', init)
-    </script>
-  </head>
-  <body id="okf-events-a">
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+<html lang="{{ page.lang | default: " en-US" }}">
 
-    {% include header.html %} 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </body>
+<head>
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+  {% seo %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <script type='text/javascript'>
+    var publicSpreadsheetUrl = '{{ page.publicSpreadsheetUrl }}';
+
+    function init() {
+      Tabletop.init({
+        key: publicSpreadsheetUrl,
+        callback: showInfo,
+        simpleSheet: true
+      })
+    }
+
+    function showInfo(data, tabletop) {
+      alert('Successfully processed!')
+      console.log(data);
+    }
+
+    function showInfo(data, tabletop) {
+      data.forEach(function (data) {
+        // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
+        event_access.innerHTML = data.event_access;
+        if (data.event_agendashow == "TRUE") {
+          event_agenda.innerHTML = data.event_agenda;
+        } else {
+          document.getElementById("event_agendashow").style.display = "none";
+        }
+        if (data.event_background > "") {
+          event_background.innerHTML = data.event_background;
+        }
+        if (data.event_childcare > "") {
+          event_childcare.innerHTML = data.event_childcare;
+        }
+        if (data.event_codeofconduct > "") {
+          event_codeofconduct.innerHTML = data.event_codeofconduct;
+        } else {
+          document.getElementById("event_codeofconductshow").style.display = "none";
+        }
+        event_costs.innerHTML = data.event_costs;
+        if (data.event_enddate > "") {
+          event_enddate.innerHTML = data.event_enddate;
+        } else {
+          document.getElementById("event_enddateshow").style.display = "none";
+        }
+        event_facilitators.innerHTML = data.event_facilitators;
+        event_language.innerHTML = data.event_language;
+        event_liveresources.innerHTML = data.event_liveresources;
+        if (data.event_livestreamshow == "TRUE") {
+          event_livestream.innerHTML = data.event_livestream;
+        } else {
+          document.getElementById("event_livestreamshow").style.display = "none";
+        }
+        event_location.innerHTML = data.event_location;
+        event_organiser.innerHTML = data.event_organiser;
+        event_outputs.innerHTML = data.event_outputs;
+        event_preparation.innerHTML = data.event_preparation;
+        event_prerequisites.innerHTML = data.event_prerequisites;
+        if (data.event_presurveyshow == "TRUE") {
+          event_presurvey.innerHTML = data.event_presurvey;
+        } else {
+          document.getElementById("event_presurveyshow").style.display = "none";
+        }
+        if (data.event_postsurveyshow == "TRUE") {
+          event_postsurvey.innerHTML = data.event_postsurvey;
+        } else {
+          document.getElementById("event_postsurveyshow").style.display = "none";
+        }
+        if (data.event_series > '') {
+          event_series.innerHTML = data.event_series;
+        } else {
+          event_series.innerHTML = "";
+        }
+
+        event_startdate.innerHTML = data.event_startdate;
+        event_structure.innerHTML = data.event_structure;
+        event_summary.innerHTML = data.event_summary;
+        event_timing.innerHTML = data.event_timing;
+        event_title.innerHTML = data.event_title;
+        if (data.event_washupshow == "TRUE") {
+          event_washup.innerHTML = data.event_washup;
+        } else {
+          document.getElementById("retro").style.display = "none";
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
+</head>
+
+<body id="okf-events-a">
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+  {% include header.html %}
+  <main id="content" class="main-content" role="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+
 </html>

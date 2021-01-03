@@ -3,7 +3,8 @@ layout: event
 title: 
 description: "A course from Open Knowledge Foundation"
 permalink: /firstpage/
-publicSpreadsheetURL: https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing
+publicSpreadsheetUrl: "https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/edit?usp=sharing"
+lang: 
 ---
 
 
