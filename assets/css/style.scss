@@ -8,6 +8,20 @@
     color: #000000;
     }
 
+html {
+    font-size: 16px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+}
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
 body {
     margin: 0;
     font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -70,13 +84,6 @@ body {
     font-weight: 400;
 }
 
-
-.main-content {
-    max-width: 64rem;
-    padding: 2rem 6rem;
-    margin: 0;
-}
-
 .site-footer {
     color: rgba(0,0,0,.6);
     padding: 3rem 0 2rem;
@@ -116,6 +123,25 @@ body {
     opacity: .9;
 }
 
+@media (min-width: 992px) {
+    .site-footer .footer-primary .footer-logo {
+        flex: 0 0 16.6666666667%;
+        max-width: 16.6666666667%;
+    }
+}
+
+.site-footer .footer-primary .footer-logo svg .a {
+    fill: #939598;
+}
+
+.site-footer .footer-primary .footer-logo svg .b {
+    fill: #d9dbdc;
+}
+
+.site-footer .footer-primary .footer-logo svg .c {
+    fill: #231f20;
+}
+
 .site-footer .footer-primary .footer-links {
     position: relative;
     width: 100%;
@@ -123,10 +149,24 @@ body {
     padding-left: 15px;
     margin: 10px;
 }
+@media (min-width: 992px) {
+.site-footer .footer-primary .footer-links {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+    text-align: right;
+    margin: 0;
+}
+}
 
 .site-footer .footer-primary .footer-links li {
     display: inline-block;
     padding: 7px;
+}
+@media (min-width: 992px) {
+.site-footer .footer-primary .footer-links li {
+    display: inline-block;
+    padding: 7px;
+}
 }
 
 .site-footer .license {
@@ -174,7 +214,7 @@ body {
     background-color: #fff;
 }
 
-.main-content h1, .main-content h2, .main-content h3, .main-content h4 {
+main h1, main h2, main h3, main h4 {
     margin-bottom: 1rem;
     margin-top: 0;
     color: #231f20;
@@ -182,16 +222,16 @@ body {
     line-height: 1.2;
 }
 
-.main-content h1 {
+main h1 {
     font-size: 2.5rem;
 }
 
-.main-content h2 {
+main h2 {
     margin-top: 2rem;
     font-size: 2rem;
 }
 
-.main-content h3 {
+main h3 {
     margin-top: 1.5rem;
     font-size: 2rem;
     font-weight: 400;
@@ -212,10 +252,17 @@ body {
     width: 40%;
     padding: 1rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
     background-color: #d1f7ff;
 }
+@media (max-width: 575px) {
+    .event-details-key-info-panel {
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
-.main-content .event-details-key-info-panel h3 {
+main .event-details-key-info-panel h3 {
     background-color: #00d1ff;
     color: #000000;
     font-size: 1.5rem;
