@@ -12,7 +12,7 @@
   </script>
   {% endif %}
   <meta charset="UTF-8">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+  <script src="/assets/js/papaparse.js"></script>
   {% seo %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
@@ -22,19 +22,15 @@
     var publicSpreadsheetUrl = '{{ page.publicSpreadsheetUrl }}';
 
     function init() {
-      Tabletop.init({
-        key: publicSpreadsheetUrl,
-        callback: showInfo,
-        simpleSheet: true
+      Papa.parse(publicSpreadsheetUrl, {
+        download: true,
+        header: true,
+        complete: showInfo
       })
     }
 
-    function showInfo(data, tabletop) {
-      alert('Successfully processed!')
-      console.log(data);
-    }
-
-    function showInfo(data, tabletop) {
+    function showInfo(results) {
+      let data = results.data
       data.forEach(function (data) {
         // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
         event_access.innerHTML = data.event_access;
