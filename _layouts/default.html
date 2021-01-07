@@ -26,6 +26,8 @@
 
   {% include header.html %}
   <main id="content" class="container main" role="main">
+    <h1>{{ page.title | nothing }}</h1>
+    <p>{{ page.description | nothing }}</p>
     {{ content }}
   </main>
   {% include footer.html %}

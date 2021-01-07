@@ -1,13 +1,15 @@
 ---
 layout: event
-title: 
-description: "A course from Open Knowledge Foundation"
+title: "Learning to do a thing"
+description: "This two-hour interactive session will use examples to show you how to do a thing and how to become a better person by knowing how to do it."
+series:
+serieslink:
 permalink: /firstpage/
 publicSpreadsheetUrl: "https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/pub?output=csv"
 lang: 
 ---
 
-
+<p class="event-okf-strapline">A course from Open Knowledge Foundation</p>
 <h1 id="event_title"></h1>
 <p class="series-title">A module in the  <span class="series"><a href="{{ site.baseurl }}/series-gis"><span id="event_series"></span></a></span> series</p>
 <p><strong id="event_summary"></strong>

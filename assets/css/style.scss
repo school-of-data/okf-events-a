@@ -45,6 +45,7 @@ body {
     background-color: #ffffff;
     background-image: none;
     padding: 0;
+    margin-bottom: 3rem;
 }
 
 .page-header .header-logo svg {
@@ -57,20 +58,55 @@ body {
     float: right;
     font-size: 1.25rem;
 }
+@media (min-width: 400px) {
+    .primary-nav ul {
+        float: left;
+        margin-top: 0.5rem;
+        padding-left: 0;
+    }
+}
+@media (min-width: 576px) {
+    .primary-nav ul {
+        float: right;
+    }
+}
 
 .primary-nav li {
     display: inline-block;
     margin: 0 0 0 1rem;
 }
+@media (min-width: 400px) {
+    .primary-nav li {
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0 1rem 0 0;
+    }
+}
+@media (min-width: 576px) {
+    .primary-nav li {
+        display: block;
+        font-size: 1rem;
+        margin: 0 0 0 1rem;
+    }
+}
+@media (min-width: 992px) {
+    .primary-nav li {
+        display: inline-block;
+        font-size: 1.3rem;
+        margin: 0 1rem 0 0;
+    }
+}
 
 .primary-nav a {
     text-decoration: none;
     color: #231f20;
+    border-bottom: solid 0.15em #00d1ff;
 }
 
 .primary-nav a:hover {
     text-decoration: none;
     color: #231f20;
+    border-bottom: solid 0.15em #1e6bb8;
 }
 
 .page-name {
@@ -176,6 +212,12 @@ body {
     text-decoration: none;
 }
 
+.site-footer .license svg {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+}
+
 .site-footer a {
     color: rgba(0,0,0,.9);
     box-shadow: none;
@@ -193,6 +235,10 @@ body {
 .container {
     max-width: 960px;
 }}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }}
 .container {
     width: 100%;
     padding-right: 15px;
