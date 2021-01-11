@@ -8,6 +8,7 @@ permalink: /firstpage/
 publicSpreadsheetUrl: "https://docs.google.com/spreadsheets/d/1cXHJ8DsS7kndV2xfdR48RNx1s2ySxOOH92EQIIa6-Wc/pub?output=csv"
 date: 2021-03-19
 lang: 
+location: Online
 ---
 
 <h3>Script test</h3>
