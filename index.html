@@ -21,5 +21,40 @@ Sample event page is <a href="firstpage">here</a>. Another <a href="gis-1">here<
 
 <h2>By date</h2>
 
-No idea!
+In Liquid:
 
+{% highlight html %}
+Get a list of all events with date > now
+Sort into a list in ascending date order
+For each event, get and render
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle">
+            <span class="eventlisting-eventdate">[date as dd mmmm yyyy]</span>
+            <span class="eventlisting-eventtitle">
+                <a href="[permalink]">[title]</a>
+            </span>
+        </p>
+        <p class="eventlisting-eventdescription">[description]</p>
+        if [series] then
+            <p class="eventlisting-seriestitle">
+                An event in the <a href="[serieslink]">[series]</a> series.
+            </p>
+        else 
+            nothing
+    </div>
+{% endhighlight %}
+
+which looks like
+
+<div class="eventlisting">
+    <p class="eventlisting-eventdateandtitle">
+        <span class="eventlisting-eventdate">22 February 2021</span>
+        <span class="eventlisting-eventtitle">
+            <a href="gis-1">Module 1 unknown title</a>
+        </span>
+    </p>
+    <p class="eventlisting-eventdescription">This two-hour interactive session will use examples to show you how to do a thing and how to become a better person by knowing how to do it.</p>
+        <p class="eventlisting-seriestitle">
+            An event in the <a href="series-gis">Geographic Information Systems</a> series.
+        </p>
+</div>
