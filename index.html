@@ -14,7 +14,7 @@ Event listing in date order from live event-template metadata (se end of page).
 <div class="eventlisting">
     <p class="eventlisting-eventdateandtitle">
         <span class="eventlisting-eventtitle">
-            <a href="{{ node.permalink }}">{{ node.title }}</a>
+            <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
         </span>
         <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
         <span class="eventlisting-eventlocation">{{ node.location }}</span>
