@@ -14,7 +14,7 @@ But we don't know everything. If a single event in a series seems useful to you 
 {% for node in serieslist %}
 <div class="serieslisting">
 <h2 class="serieslisting-title">
-    <a href="{{ node.permalink }}">{{ node.title }}</a>
+    <a href="{{ site.baseurl }}/{{ node.permalink }}">{{ node.title }}</a>
 </h2>
 {% assign eventlist = site.pages | where: page.series, node.title | sort: "date" %}
 {% for node in eventlist %}
@@ -22,7 +22,7 @@ But we don't know everything. If a single event in a series seems useful to you 
 {% if node.series != serieslist.node.title %}
 <p class="serieslisting-eventdateandtitle">
     <span class="serieslisting-eventtitle">
-        <a href="{{ node.permalink }}">{{ node.title }}</a>
+        <a href="{{ site.baseurl }}/{{ node.permalink }}">{{ node.title }}</a>
     </span>
     <span class="serieslisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
     <span class="serieslisting-eventlocation">{{ node.location }}</span>
