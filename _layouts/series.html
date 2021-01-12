@@ -24,8 +24,33 @@
 
   {% include header.html %}
   <main id="content" class="container main" role="main">
+
+    <h1>{{ page.title }}</h1>
+    <p><strong>{{ page.description }}</strong></p>
+    <p>(heading and intro generated from page metadata. Text between here and the event listing is added to the relevant series GitHub page.)</p>
     
     {{ content }}
+
+    <h2>Events in this series</h2>
+    <p>(This listing generated automatically from page metadata)</p>
+    {% assign eventlist = site.pages | where: "series", page.series | sort: "date" %}
+    {% for node in eventlist %}
+        {% if node.layout == 'event' %}
+        {% if node.series == page.title %}
+<div class="eventlisting">
+    <p class="eventlisting-eventdateandtitle">
+        <span class="eventlisting-eventtitle">
+            <a href="{{ node.permalink }}">{{ node.title }}</a>
+        </span>
+        <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
+        <span class="eventlisting-eventlocation">{{ node.location }}</span>
+    </p>
+    <p class="eventlisting-eventdescription">{{ node.description }}</p>
+</div>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+
   </main>
   {% include footer.html %}
 </body>

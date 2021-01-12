@@ -320,38 +320,30 @@ main .event-details-key-info-panel h3 {
 
 /* Events summary/listing page */
 
-.event-panel, .eventlisting {
+.eventlisting {
     display: block;
     padding: 1.5rem;
     background-color: #D1F7FF;
     margin: 2rem 0;
 }
 
-.event-panel p, .eventlisting p {
+.eventlisting p {
     margin: 0.5rem 0 0 0;
 }
 
-.event-panel-title, .eventlisting-eventdateandtitle {
+.eventlisting-eventdateandtitle {
     font-size: 24pt;
     margin: 0;
 }
-.event-panel-eventtitle, .eventlisting-eventtitle, .eventlisting-seriestitle a {
+.eventlisting-eventtitle, .eventlisting-seriestitle a {
     font-weight: 900;
 }
 
-.event-panel-date {
-
+.eventlisting-eventtitle {
+    margin-right: 1rem;
 }
 
-.event-panel-location {
-    font-weight: 700;
-}
-
-.event-panel-details-button, .event-panel-all-events {
-     background-color: #00D1FF;
-     padding: 1rem;
-     color: #ffffff;
-     font-weight: 700;
-     margin: 1rem 1rem 1rem 0;
-     display: inline-block;
+.eventlisting-eventdate {
+    margin-right: 1rem;
+    display: inline-block;
 }

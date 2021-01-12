@@ -79,12 +79,7 @@
         } else {
           document.getElementById("event_postsurveyshow").style.display = "none";
         }
-        if (data.event_series > '') {
-          event_series.innerHTML = data.event_series;
-        } else {
-          event_series.innerHTML = "";
-        }
-
+        
         event_startdate.innerHTML = data.event_startdate;
         event_structure.innerHTML = data.event_structure;
         event_summary.innerHTML = data.event_summary;
@@ -110,7 +105,9 @@
 
     <p class="event-okf-strapline">A course from Open Knowledge Foundation</p>
 <h1 id="event_title"></h1>
-<p class="series-title">A module in the  <span class="series"><a href="{{ site.baseurl }}/series-gis"><span id="event_series"></span></a></span> series</p>
+{% if page.series %}
+<p class="series-title">A module in the  <span class="series"><a href="{{ site.baseurl }}/{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</p>
+{% endif %}
 <p><strong id="event_summary"></strong>
 <p id="event_facilitators" class="facilitators"></p>
 <div id="event_livestreamshow">

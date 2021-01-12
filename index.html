@@ -4,10 +4,33 @@ title: Open Knowlege events
 description: Upcoming and past training events from Open Knowledge activities and programmes.
 ---
 
-Sample event page is <a href="firstpage">here</a>. Another <a href="gis-1">here</a>.
+Event listing in date order from live event-template metadata (se end of page).
 
-<h2>Events</h2>
-<p>We can use explicit page metadata to select and sort entries. Currently this is, for events, </p>
+<h2>OKF events, by date</h2>
+
+{% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" %}
+    {% for node in eventlist %}
+        {% if node.layout == 'event' %}
+<div class="eventlisting">
+    <p class="eventlisting-eventdateandtitle">
+        <span class="eventlisting-eventtitle">
+            <a href="{{ node.permalink }}">{{ node.title }}</a>
+        </span>
+        <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
+        <span class="eventlisting-eventlocation">{{ node.location }}</span>
+    </p>
+    <p class="eventlisting-eventdescription">{{ node.description }}</p>
+        {% if node.series %}
+        <p class="eventlisting-seriestitle">
+            An event in the <a href="{{ node.serieslink }}">{{ node.series }}</a> series.
+        </p>
+        {% endif %}
+</div>
+        {% endif %}
+    {% endfor %}
+
+    <h2>Events</h2>
+<p>We can use explicit page metadata on each GitHub event page to select and sort entries. Currently this is, for events, </p>
 <ul>
     <li>layout: [name of template]</li>
     <li>title: [event title, normally the same as the spreadsheet title]</li>
@@ -20,68 +43,3 @@ Sample event page is <a href="firstpage">here</a>. Another <a href="gis-1">here<
     <li>lang: [language of the event page, optional: 'en' is default. NB Static txt/headings not currently translated and no machinery in place eg gettext framework]</li>
     <li>location: [one-word location description, eg 'Berlin' or 'Online' etc.]</li>
 </ul>
-
-<h2>By date</h2>
-
-In Liquid:
-
-{% highlight html %}
-Get a list of all events with date > now
-Sort into a list in ascending date order
-For each event, get and render
-    <div class="eventlisting">
-        <p class="eventlisting-eventdateandtitle">
-            <span class="eventlisting-eventdate">[date as dd mmmm yyyy from page metadata]</span>
-            <span class="eventlisting-eventtitle">
-                <a href="[permalink]">[title from page metadata]</a>
-            </span>
-            <span class="eventlisting-eventlocation">[location from page metadata]</span>
-        </p>
-        <p class="eventlisting-eventdescription">[description from page metadata]</p>
-        if [series from page metadata] then
-            <p class="eventlisting-seriestitle">
-                An event in the <a href="[serieslink from page metadata]">[series from page metadata]</a> series.
-            </p>
-        else 
-            nothing
-    </div>
-{% endhighlight %}
-
-which looks like:
-
-<div class="eventlisting">
-    <p class="eventlisting-eventdateandtitle">
-        <span class="eventlisting-eventdate">22 February 2021</span>
-        <span class="eventlisting-eventtitle">
-            <a href="gis-1">Module 1 unknown title</a>
-        </span>
-        <span class="eventlisting-eventlocation">Berlin</span>
-    </p>
-    <p class="eventlisting-eventdescription">This two-hour interactive session will use examples to show you how to do a thing and how to become a better person by knowing how to do it.</p>
-        <p class="eventlisting-seriestitle">
-            An event in the <a href="series-gis">Geographic Information Systems</a> series.
-        </p>
-</div>
-
-and rendered from data:
-
-{% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" %}
-    {% for node in eventlist %}
-        {% if node.layout == 'event' %}
-<div class="eventlisting">
-    <p class="eventlisting-eventdateandtitle">
-        <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
-        <span class="eventlisting-eventtitle">
-            <a href="{{ node.permalink }}">{{ node.title }}</a>
-        </span>
-        <span class="eventlisting-eventlocation">{{ node.location }}</span>
-    </p>
-    <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        {% if node.series %}
-        <p class="eventlisting-seriestitle">
-            An event in the <a href="{{ node.serieslink }}">{{ node.series }}</a> series.
-        </p>
-        {% endif %}
-</div>
-        {% endif %}
-    {% endfor %}
