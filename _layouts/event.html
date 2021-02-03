@@ -45,11 +45,6 @@
         if (data.event_childcare > "") {
           event_childcare.innerHTML = data.event_childcare;
         }
-        if (data.event_codeofconduct > "") {
-          event_codeofconduct.innerHTML = data.event_codeofconduct;
-        } else {
-          document.getElementById("event_codeofconductshow").style.display = "none";
-        }
         event_costs.innerHTML = data.event_costs;
         if (data.event_enddate > "") {
           event_enddate.innerHTML = data.event_enddate;
@@ -140,9 +135,8 @@
 </div>
 <p>To prepare for this event you should:</p>
 <p id="event_preparation"></p>
-<div id="event_codeofconductshow">
-<p><strong>Code of conduct: </strong><span id="event_codeofconduct"></span></p>
-</div>
+<h3>Code of conduct</h3>
+<p>All Open Knowledge Foundation activities are governed by our <a href="https://okfn.org/about/code-of-conduct/">Code of Conduct</a>. Agreeing to conform to this is a condition of participating in our activities.</p>
 <h2>At the event</h2>
 <div id="event_agendashow">
 <h3>Agenda</h3>
