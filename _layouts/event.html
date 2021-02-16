@@ -63,10 +63,10 @@
         event_organiser.innerHTML = data.event_organiser;
         if (data.event_outputs > "") {
           event_outputs.innerHTML = data.event_outputs;
-          }
-          else {
-            document.getElementById("outputshow").style.display = "none";
-          }
+        }
+        else {
+          document.getElementById("outputshow").style.display = "none";
+        }
         event_preparation.innerHTML = data.event_preparation;
         event_prerequisites.innerHTML = data.event_prerequisites;
         if (data.event_presurveyshow == "TRUE") {
@@ -80,13 +80,17 @@
         else {
           document.getElementById("aftersections").style.display = "block"
         }
-        
+        if (data.event_presurveyshow == "FALSE" && data.event_preparation == "") {
+          document.getElementById("before-event").style.display = "none"
+        } else {
+          document.getElementById("before-event").style.display = "block"
+        }
         if (data.event_postsurveyshow == "TRUE") {
           event_postsurvey.innerHTML = data.event_postsurvey;
         } else {
           document.getElementById("event_postsurveyshow").style.display = "none";
         }
-        
+
         event_startdate.innerHTML = data.event_startdate;
         event_structure.innerHTML = data.event_structure;
         event_summary.innerHTML = data.event_summary;
@@ -111,68 +115,75 @@
   <main id="content" class="container main" role="main">
 
     <p class="event-okf-strapline">A course from Open Knowledge Foundation</p>
-<h1 id="event_title"></h1>
-{% if page.series %}
-<p class="series-title">A module in the  <span class="series"><a href="{{ site.baseurl }}{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</p>
-{% endif %}
-<p><strong id="event_summary"></strong>
-<p id="event_facilitators" class="facilitators"></p>
-<div id="event_livestreamshow">
-<div id="event_livestream"></div>
-</div>
-<div class="event-details-key-info-panel">
-<h3>Key information</h3>
-<p><strong>Date: </strong><span id="event_startdate"></span>
-<span id="event_enddateshow">
-<span>–</span><span id="event_enddate"></span>
-</span>
-</p>
-<p class="event-timing"><strong>Time: </strong><span id="event_timing"></span></p>
-<p><strong>Location: </strong><span id="event_location"></span></p>
-<p><strong>Event language: </strong><span id="event_language"></span></p>
+    <h1 id="event_title"></h1>
+    {% if page.series %}
+    <p class="series-title">A module in the <span class="series"><a
+          href="{{ site.baseurl }}{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</p>
+    {% endif %}
+    <p><strong id="event_summary"></strong>
+    <div id="event_livestreamshow">
+      <div id="event_livestream"></div>
+    </div>
+    <div class="event-details-key-info-panel">
+      <h3>Key information</h3>
+      <p><strong>Date: </strong><span id="event_startdate"></span>
+        <span id="event_enddateshow">
+          <span>–</span><span id="event_enddate"></span>
+        </span>
+      </p>
+      <p class="event-timing"><strong>Time: </strong><span id="event_timing"></span></p>
+      <p><strong>Location: </strong><span id="event_location"></span></p>
+      <p><strong>Event language: </strong><span id="event_language"></span></p>
 
-<p><strong>Costs: </strong><span id="event_costs"></span></p>
-<p><strong>Organiser: </strong><span id="event_organiser"></span></p>
-<p><strong>Childcare: </strong><span id="event_childcare"></span></p>
-<p><strong>Access: </strong><span id="event_access"></span></p>
+      <p><strong>Costs: </strong><span id="event_costs"></span></p>
+      <p><strong>Organiser: </strong><span id="event_organiser"></span></p>
+      <p><strong>Childcare: </strong><span id="event_childcare"></span></p>
+      <p><strong>Access: </strong><span id="event_access"></span></p>
 
-</div>
-<div id="event_background"></div>
-<h3>Prerequisites</h3>
-<p id="event_prerequisites"></p>
-<div id="event_presurveyshow">
-  <p>Please complete this survey before the event so we can tailor the training to suit your needs.</p>
-  <p><span id="event_presurvey"></span></p>
-</div>
-<h2>Preparing for the event</h2>
-<p id="event_preparation"></p>
-<h3>Code of conduct</h3>
-<p>All Open Knowledge Foundation activities are governed by our <a href="https://okfn.org/about/code-of-conduct/">Code of Conduct</a>. Agreeing to conform to this is a condition of participating in our activities.</p>
-<h2>At the event</h2>
-<div id="event_agendashow">
-<h3>Agenda</h3>
-<p id="event_agenda"></p>
-</div>
-<p><strong>Structure: </strong><span id="event_structure"></span></p>
-<div id="live_prompts">  
-  <h3>Prompts during the event</h3>
-  <p id="event_liveresources"></p>
-</div>
-<div id="aftersections">
-  <h2>What we did and what we learned</h2>
-<div id="event_postsurveyshow">
-  
-  <p id="event_postsurvey"></p>
-</div>
-<div id="retro">
-  <h3>Event retro</h3>
-  <p id="event_washup"></p>
-</div>
-<div id="outputshow">
-  <h3>Outputs generated by this event</h3>
-  <div id="event_outputs"></div>
-</div>
-</div>
+    </div>
+    <p id="event_facilitators" class="facilitators"></p>
+    <div id="event_background"></div>
+    <h3>Prerequisites</h3>
+    <p id="event_prerequisites"></p>
+    <div class="before-event" id="before-event">
+      <h2>Preparing for the event</h2>
+      <div id="event_presurveyshow">
+        <p>Please complete this survey before the event so we can tailor the training to suit your needs.</p>
+        <p><span id="event_presurvey"></span></p>
+      </div>
+      <p id="event_preparation"></p>
+      <h3>Code of conduct</h3>
+      <p>All Open Knowledge Foundation activities are governed by our <a
+          href="https://okfn.org/about/code-of-conduct/">Code of Conduct</a>. Agreeing to conform to this is a condition
+        of participating in our activities.</p>
+    </div>
+    <div class="at-event">
+      <h2>At the event</h2>
+      <div id="event_agendashow">
+        <h3>Agenda</h3>
+        <p id="event_agenda"></p>
+      </div>
+      <p><strong>Structure: </strong><span id="event_structure"></span></p>
+      <div id="live_prompts">
+        <h3>Prompts during the event</h3>
+        <p id="event_liveresources"></p>
+      </div>
+    </div>
+    <div id="aftersections" class="aftersections">
+      <h2>What we did and what we learned</h2>
+      <div id="event_postsurveyshow">
+
+        <p id="event_postsurvey"></p>
+      </div>
+      <div id="retro">
+        <h3>Event retro</h3>
+        <p id="event_washup"></p>
+      </div>
+      <div id="outputshow">
+        <h3>Outputs generated by this event</h3>
+        <div id="event_outputs"></div>
+      </div>
+    </div>
     {{ content }}
   </main>
   {% include footer.html %}

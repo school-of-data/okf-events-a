@@ -262,7 +262,6 @@ body {
 
 main h1, main h2, main h3, main h4 {
     margin-bottom: 1rem;
-    margin-top: 0;
     color: #231f20;
     font-weight: 900;
     line-height: 1.2;
@@ -273,13 +272,13 @@ main h1 {
 }
 
 main h2 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 2rem;
 }
 
 main h3 {
-    margin-top: 1.5rem;
-    font-size: 2rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
@@ -317,6 +316,17 @@ main .event-details-key-info-panel h3 {
     padding: 0.75rem 1rem;
 }
 
+/* Event page blocks */
+
+.at-event, .aftersections {
+    border: 0.2rem #939598 solid;
+    padding: 1rem;
+    margin: 3rem 0 0 0;
+}
+
+.at-event h2, .aftersections h2 {
+    margin-top: 0;
+}
 
 /* Events summary/listing page */
 
