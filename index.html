@@ -6,10 +6,13 @@ description: Upcoming and past training events from Open Knowledge activities an
 
 Event listing in date order from live event-template metadata (se end of page).
 
-<h2>OKF events, by date</h2>
+<h2>OKF current events</h2>
 
 {% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" %}
+{% capture now %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
     {% for node in eventlist %}
+      {% capture date %}{{node.date | date: '%s' | plus: 0 %}}{% endcapture %}
+      {% if date >= now %}
         {% if node.layout == 'event' %}
 <div class="eventlisting">
     <p class="eventlisting-eventdateandtitle">
@@ -27,19 +30,32 @@ Event listing in date order from live event-template metadata (se end of page).
         {% endif %}
 </div>
         {% endif %}
+        {% endif %}
     {% endfor %}
 
-    <h2>Events</h2>
-<p>We can use explicit page metadata on each GitHub event page to select and sort entries. Currently this is, for events, </p>
-<ul>
-    <li>layout: [name of template]</li>
-    <li>title: [event title, normally the same as the spreadsheet title]</li>
-    <li>description: [description, normally same as description on spreadsheet]</li>
-    <li>permalink: [leaf url of this page]</li>
-    <li>series: [name of series this event is part of. Blank if standalone event]</li>
-    <li>serieslink: [leaf url of series summary page. Blank if standalone event]</li>
-    <li>date: [start date of event as yyyy-mm-dd e.g. 2021-06-22]</li>
-    <li>publicSpreadsheetUrl: [url of spreadsheet with details of the event in csv format]</li>
-    <li>lang: [language of the event page, optional: 'en' is default. NB Static txt/headings not currently translated and no machinery in place eg gettext framework]</li>
-    <li>location: [one-word location description, eg 'Berlin' or 'Online' etc.]</li>
-</ul>
+    <h2>OKF past events</h2>
+    {% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" | reverse %}
+    {% capture now %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
+        {% for node in eventlist %}
+          {% capture date %}{{node.date | date: '%s' | plus: 0 %}}{% endcapture %}
+          {% if date < now %}
+            {% if node.layout == 'event' %}
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle">
+            <span class="eventlisting-eventtitle">
+                <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
+            </span>
+            <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
+            <span class="eventlisting-eventlocation">{{ node.location }}</span>
+        </p>
+        <p class="eventlisting-eventdescription">{{ node.description }}</p>
+            {% if node.series %}
+            <p class="eventlisting-seriestitle">
+                An event in the <a href="{{ node.serieslink }}">{{ node.series }}</a> series.
+            </p>
+            {% endif %}
+    </div>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+    
