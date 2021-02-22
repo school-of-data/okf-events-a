@@ -282,6 +282,25 @@ main h3 {
     font-weight: 400;
 }
 
+/* Basic table organisation */
+
+table {
+    border-bottom: 1px solid #000;
+}
+
+table, tr {
+    margin: 1rem 0 2rem 0;
+    border-top: 1px solid #000;
+}
+
+td, th {
+    padding: 0.2rem 1rem 0.2rem 0;
+}
+
+td p, th p {
+    margin: 0;    
+}
+
 /* Series link */
 
 .series {
