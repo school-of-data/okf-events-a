@@ -25,7 +25,7 @@ Event listing in date order from live event-template metadata (se end of page).
     <p class="eventlisting-eventdescription">{{ node.description }}</p>
         {% if node.series %}
         <p class="eventlisting-seriestitle">
-            An event in the <a href="{{ node.serieslink }}">{{ node.series }}</a> series.
+            An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
         </p>
         {% endif %}
 </div>
@@ -51,7 +51,7 @@ Event listing in date order from live event-template metadata (se end of page).
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
             {% if node.series %}
             <p class="eventlisting-seriestitle">
-                An event in the <a href="{{ node.serieslink }}">{{ node.series }}</a> series.
+                An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
             </p>
             {% endif %}
     </div>
