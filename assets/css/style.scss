@@ -337,13 +337,13 @@ main .event-details-key-info-panel h3 {
 
 /* Event page blocks */
 
-.at-event, .aftersections {
+.before-event, .at-event, .aftersections {
     border: 0.2rem #939598 solid;
     padding: 1rem;
     margin: 3rem 0 0 0;
 }
 
-.at-event h2, .aftersections h2 {
+.before-event h2, .at-event h2, .aftersections h2 {
     margin-top: 0;
 }
 
@@ -375,4 +375,10 @@ main .event-details-key-info-panel h3 {
 .eventlisting-eventdate {
     margin-right: 1rem;
     display: inline-block;
+}
+
+/* Defaults iframe positioning */
+
+iframe {
+    align-items: left;
 }
