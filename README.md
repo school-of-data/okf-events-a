@@ -70,5 +70,7 @@ title: [Title of the overall series]
 description: [Short description of the series]
 permalink: /series/<name-of-series>
 ---
+```
 
-**permalink** should used in the **serieslink** front matter of an event under the series.
+
+**permalink** should be used in the **serieslink** front matter of an event under the series.
