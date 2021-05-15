@@ -18,6 +18,7 @@
   <meta name="theme-color" content="#157878">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
   <script type='text/javascript'>
     var publicSpreadsheetUrl = '{{ page.publicSpreadsheetUrl }}';
 
@@ -117,7 +118,7 @@
     <p class="event-okf-strapline">A course from Open Knowledge Foundation</p>
     <h1 id="event_title"></h1>
     {% if page.series %}
-    <p class="series-title">A module in the <span class="series"><a
+    <p class="series-title">An event in the <span class="series"><a
           href="{{ site.baseurl }}{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</p>
     {% endif %}
     <p><strong id="event_summary"></strong>
@@ -148,7 +149,6 @@
     <div class="before-event" id="before-event">
       <h2>Preparing for the event</h2>
       <div id="event_presurveyshow">
-        <p>Please complete this survey before the event so we can tailor the training to suit your needs.</p>
         <p><span id="event_presurvey"></span></p>
       </div>
       <p id="event_preparation"></p>

@@ -1,61 +1,64 @@
 ---
 layout: default
-title: Open Knowlege events
+title: Open Knowledge events
 description: Upcoming and past training events from Open Knowledge activities and programmes.
 ---
 
-Event listing in date order from live event-template metadata (se end of page).
+<h2>OKF current and upcoming events</h2>
 
-<h2>OKF current events</h2>
-
-{% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" %}
-{% capture now %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
-    {% for node in eventlist %}
-      {% capture date %}{{node.date | date: '%s' | plus: 0 %}}{% endcapture %}
-      {% if date >= now %}
-        {% if node.layout == 'event' %}
-<div class="eventlisting">
-    <p class="eventlisting-eventdateandtitle">
-        <span class="eventlisting-eventtitle">
-            <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
-        </span>
-        <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
-        <span class="eventlisting-eventlocation">{{ node.location }}</span>
-    </p>
-    <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        {% if node.series %}
-        <p class="eventlisting-seriestitle">
-            An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
-        </p>
-        {% endif %}
-</div>
-        {% endif %}
-        {% endif %}
-    {% endfor %}
-
-    <h2>OKF past events</h2>
-    {% assign eventlist = site.pages | where: 'layout', 'event' | sort: "date" | reverse %}
-    {% capture now %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" %}
+    {% capture now %}{{"now" | date: "%s" | plus: 0 %}}{% endcapture %}
         {% for node in eventlist %}
-          {% capture date %}{{node.date | date: '%s' | plus: 0 %}}{% endcapture %}
-          {% if date < now %}
-            {% if node.layout == 'event' %}
-    <div class="eventlisting">
-        <p class="eventlisting-eventdateandtitle">
-            <span class="eventlisting-eventtitle">
-                <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
-            </span>
-            <span class="eventlisting-eventdate">{{ node.date | date: "%d %B %Y" }}</span>
-            <span class="eventlisting-eventlocation">{{ node.location }}</span>
-        </p>
-        <p class="eventlisting-eventdescription">{{ node.description }}</p>
-            {% if node.series %}
-            <p class="eventlisting-seriestitle">
-                An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
-            </p>
-            {% endif %}
-    </div>
-            {% endif %}
+            {% capture date %}{{node.date | date: "%s" | plus: 0 %}}{% endcapture %}
+            {% if date >= now %}
+                {% if node.layout == "event" %}
+                    <div class="eventlisting">
+                        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+                            <span class="eventlisting-eventtitle">
+                                <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
+                            </span>
+                            <p>
+                                <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
+                                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
+                            </p>
+                        </p>
+                        <p class="eventlisting-eventdescription">{{ node.description }}</p>
+                            {% if node.series %}
+                            <p class="eventlisting-seriestitle">
+                                An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
+                            </p>
+                            {% endif %}
+                    </div>
+                {% endif %}
             {% endif %}
         {% endfor %}
     
+
+<h2>OKF past events</h2>
+
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
+    {% capture now %}{{"now" | date: "%s" | plus: 0 %}}{% endcapture %}
+        {% for node in eventlist %}
+            {% capture date %}{{node.date | date: "%s" | plus: 0 %}}{% endcapture %}
+            {% if date < now %}
+                {% if node.layout == "event" %}
+                    <div class="eventlisting">
+                        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+                            <span class="eventlisting-eventtitle">
+                                <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
+                            </span>
+                            <p>
+                                <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
+                                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
+                            </p>
+                        </p>
+                        <p class="eventlisting-eventdescription">{{ node.description }}</p>
+                            {% if node.series %}
+                            <p class="eventlisting-seriestitle">
+                                An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
+                            </p>
+                            {% endif %}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}

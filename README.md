@@ -12,11 +12,11 @@ At the back end, adding a new event or series of events is accomplished by addin
 
 ### 1: Add a Google Sheet and publish it
 
-Open the Google Sheet event template at https://docs.google.com/spreadsheets/d/1P0ULZtPcw1Os9wMg6iRl9cF0xRkaItoi-O4uHkPw0KI/edit?usp=sharing and make a copy with the name of the event as its title.
+Open the Google Sheet event template at https://docs.google.com/spreadsheets/d/1joh7ZY165t5fp2DXa6F4T-z9a_cQbFeiYf3JtrLERAE/edit?usp=sharing and make a copy with the name of the event as its title.
 
 Add information about the event following the basic guidance in the template. You can return later and complete any information that you don't have now and the webpage will be immediately updated.
 
-Publish the Sheet through File > Publish to the web with settings 'main' and 'Comma-separated values (.csv). Co;y and keep safe the URL.
+Publish the Sheet through File > Publish to the web with settings 'main' and 'Comma-separated values (.csv). Copy and keep safe the URL.
 
 ### 2: Add a page to the site to hold the event data
 
@@ -24,7 +24,7 @@ You will need permission to commit to the GitHub repository and permission to pu
 
 It helps if you have a 'local' version of the site on your computer so that you can test and preview changes that you make before committing. If you are not familiar with setting up a local version of GitHub Pages see the instructions at https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.
 
-Event pages are created in the top level of the events site. Create a file with a useful name such as csv-manip-mumbai.html. 
+Event pages are created in inside the **events folder**. Create a file with a useful name such as csv-manip-mumbai.html. 
 
 In that file add the required 'front matter' to allow the site to organise access to your event page and complete an entry for each item, eg
 
@@ -33,7 +33,7 @@ In that file add the required 'front matter' to allow the site to organise acces
 layout: event
 title: "[event title]"
 description: "[Short description/summary of the event]"
-permalink: /[The name of this file without the .html suffix]/
+permalink: /[where you want the page to be located or accessed]/
 series: [The name of any series that this is a part of. Otherwise leave blank]
 serieslink: /[The name of a file describing the series if it exists. Otherwise leave blank]/
 date: [Date on which he event occurs or starts in format yyyy-mm-dd]
@@ -59,7 +59,7 @@ The front of the site lists all upcoming events. Some may be part of a programme
 
 You can create a series by creating a series file and linking to it from each of the events which are part of it.
 
-Create a file at the top level of the Git repo with a useful name such as 'series-gis.html'.
+Create a file inside the **series folder** of the Git repo with a useful name such as 'open-geodata-programme.html'.
 
 Populate the file with 'front matter' and some text (you can use html or markdown for the text) which will introduce a listing of all the events linked to the series. Like this:
 
@@ -68,14 +68,7 @@ Populate the file with 'front matter' and some text (you can use html or markdow
 layout: series
 title: [Title of the overall series]
 description: [Short description of the series]
-permalink: /[name of the series file without the .html suffix]/
+permalink: /series/<name-of-series>
 ---
 
-This series introduces *geographical information systems* (GIS). It will teach you the concepts used in GIS and how to use and change GIS data and displays using common software tools.
-
-It consists of 8 modules which are delivered in 8 online interactive tutorials and is accompanied by written reference materials for each module.
-```
-
-Open the event file for each event in the series and modify its front matter with the series title and series permalink you have used for the series file.
-
-That's it.
+**permalink** should used in the **serieslink** front matter of an event under the series.
