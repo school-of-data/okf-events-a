@@ -32,7 +32,7 @@
     {{ content }}
 
     <h2>Events in this series</h2>
-    {% assign eventlist = site.pages | where: "series", page.series | sort: "date" | "reverse" %}
+    {% assign eventlist = site.pages | where: "series", page.series | sort: "date" | reverse %}
     {% for node in eventlist %}
         {% if node.layout == 'event' %}
             {% if node.series == page.title %}
