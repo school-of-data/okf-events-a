@@ -15,7 +15,7 @@ But we don't know everything. If a single event in a series seems useful to you 
     <h2 class="serieslisting-title">
         <a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
     </h2>
-    {% assign eventlist = site.pages | where: page.series, node.title | sort: "date" | "reverse" %}
+    {% assign eventlist = site.pages | where: page.series, node.title | sort: "date" | reverse %}
     {% for node in eventlist %}
         {% if node.layout == "event" %}
             {% if node.series != serieslist.node.title %}
