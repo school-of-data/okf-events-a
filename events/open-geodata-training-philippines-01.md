@@ -1,6 +1,6 @@
 ---
 layout: event
-title: "GeoData Training Programme -- Philippines"
+title: "GeoData Training Programme - Philippines"
 description: "A 2-day live training event for learning how to utilize QGIS, OpenStreetMap, and Facebook's High Resolution Settlement Layer for public health and disaster response."
 permalink: /open-geodata-programme/philippines-01
 series: GeoData Training Programme
