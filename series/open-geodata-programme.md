@@ -1,6 +1,6 @@
 ---
 layout: series
-title: GeoData Training Programme
+title: Open Geodata Training Programme
 description: A training to help civil servants operationalise geographical data and tools for public health and disaster response. 
 permalink: /series/open-geodata-programme/
 ---
