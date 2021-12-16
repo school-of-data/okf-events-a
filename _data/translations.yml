@@ -1,0 +1,60 @@
+keyInformation:
+  en: "Key information"
+  es: "Información clave"
+date:
+  en: "Date"
+  es: "Fecha"
+time:
+  en: "Time"
+  es: "Hora"
+location:
+  en: "Location"
+  es: "Ubicación"
+eventLanguage:
+  en: "Event Language"
+  es: "Idioma del evento"
+costs:
+  en: "Costs"
+  es: "Costos"
+organiser:
+  en: "Organiser"
+  es: "Organizador"
+childcare:
+  en: "Childcare"
+  es: "cuidado de niños"
+access:
+  en: "Access"
+  es: "Acceso"
+prerequisites:
+  en: "Prerequisites"
+  es: "Prerrequisitos"
+eventPreparation:
+  en: "Preparing for the event"
+  es: "Preparándose para el evento"
+codeOfConduct:
+  en: "Code of Conduct"
+  es: "Código de conducta"
+governance1:
+  en: "All Open Knowledge Foundation activities are governed by our"
+  es: "Todas las actividades de la Open Knowledge Foundation se rigen por nuestra"
+governance2:
+  en: "Agreeing to conform to this is a condition of participating in our activities."
+  es: "Aceptar cumplir con esto es una condición de participar en nuestras actividades."
+atTheEvent:
+  en: "At The Event"
+  es: "En El Evento"
+agenda:
+  en: "Agenda"
+  es: "Agenda"
+promptsDuringTheEvent:
+  en: "Prompts During The Event"
+  es: "Indicaciones durante el evento"
+whatWeDidAndWhatWeLearned:
+  en: "What we did and what we learned"
+  es: "Lo que hicimos y lo que aprendimos"
+learningResources:
+  en: "Learning resources"
+  es: "Recursos de aprendizaje"
+eventOutputs:
+  en: "Event Outputs"
+  es: "Salidas de Eventos"
