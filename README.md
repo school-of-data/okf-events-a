@@ -74,3 +74,18 @@ permalink: /series/<name-of-series>
 
 
 **permalink** should be used in the **serieslink** front matter of an event under the series.
+
+
+### 5: Adding language support for Events headers
+
+In order to allow headers translation based on the language provided by the trainer on the Spreadsheet you will need to add 
+translation options for that specific language in the ***_data/translations.yml***
+
+Under each attributes represented as the following:
+```
+keyInformation:
+  en: "Key information"
+  es: "Información clave"
+  add_your_language_here: "add_matching_translated_text_here"
+
+```
