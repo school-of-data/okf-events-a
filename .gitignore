@@ -4,3 +4,4 @@ Gemfile
 Gemfile.lock
 .sass*
 .jekyll-cache
+.jekyll-cache/*
