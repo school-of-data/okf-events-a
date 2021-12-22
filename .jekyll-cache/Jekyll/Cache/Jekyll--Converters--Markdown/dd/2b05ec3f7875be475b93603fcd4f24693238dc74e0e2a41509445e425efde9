@@ -1,0 +1,70 @@
+I"c<p>Simple static site based on GitHub Pages made to detail and publicise Open Knowledge Foundation training events.</p>
+
+<p>Details of a training event are added to a Google Sheet, which is read in real-time when a page is rendered. This means that event details can be updated by anyone at any time and should be useful, for example, for adding event details during and after an event without the need to commit/push/publish changes.</p>
+
+<p>At the back end, adding a new event or series of events is accomplished by adding a file per event to the Git repo. The file contains several lines of ‘front matter’ identifying the event and the location of the Google Sheet which contains details of the event. Committing/pushing changes causes the site to be regenerated and republished.</p>
+
+<h2 id="adding-an-event">Adding an event</h2>
+
+<h3 id="1-add-a-google-sheet-and-publish-it">1: Add a Google Sheet and publish it</h3>
+
+<p>Open the Google Sheet event template at https://docs.google.com/spreadsheets/d/1joh7ZY165t5fp2DXa6F4T-z9a_cQbFeiYf3JtrLERAE/edit?usp=sharing and make a copy with the name of the event as its title.</p>
+
+<p>Add information about the event following the basic guidance in the template. You can return later and complete any information that you don’t have now and the webpage will be immediately updated.</p>
+
+<p>Publish the Sheet through File &gt; Publish to the web with settings ‘main’ and ‘Comma-separated values (.csv). Copy and keep safe the URL.</p>
+
+<h3 id="2-add-a-page-to-the-site-to-hold-the-event-data">2: Add a page to the site to hold the event data</h3>
+
+<p>You will need permission to commit to the GitHub repository and permission to push commits or to make a pull request for approval. Talk to Cédric Lombion (cedric.lombion@okfn.org) if you need this to be set up for you.</p>
+
+<p>It helps if you have a ‘local’ version of the site on your computer so that you can test and preview changes that you make before committing. If you are not familiar with setting up a local version of GitHub Pages see the instructions at https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.</p>
+
+<p>Event pages are created in inside the <strong>events folder</strong>. Create a file with a useful name such as csv-manip-mumbai.html.</p>
+
+<p>In that file add the required ‘front matter’ to allow the site to organise access to your event page and complete an entry for each item, eg</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: event
+title: "[event title]"
+description: "[Short description/summary of the event]"
+permalink: /[where you want the page to be located or accessed]/
+series: [The name of any series that this is a part of. Otherwise leave blank]
+serieslink: /[The name of a file describing the series if it exists. Otherwise leave blank]/
+date: [Date on which he event occurs or starts in format yyyy-mm-dd]
+publicSpreadsheetUrl: [Full URL of the Google Sheet which contains the details of the event]
+lang: [Language of the event description in ISO two-letter format, eg 'en', 'fr' etc.]
+location: [The place where the event occurs. Can be a city, country, or just 'Zoom' etc for fully-online events]
+---
+</code></pre></div></div>
+
+<p>Save the file and if you have a local site regenerate it (this is normally automatic) and test it. You should see your new event listed in date order on the front page, and clicking on the link should give you the event details.</p>
+
+<p>Commit and push to live.</p>
+
+<h3 id="3-removing-an-event-from-the-site">3: Removing an event from the site</h3>
+
+<p>It’s not the intention that events should ever be removed from the site. The event listing pushes ‘past events’ to the bottom beneath a suitable heading, and they may contain useful lessons or outputs from the event, as well as serving as a reminder for attendees.</p>
+
+<p>If you must remove event details, just delete the corresponding event file at the top level of the Git repo.</p>
+
+<h3 id="4-adding-a-series-container">4: Adding a ‘series’ container</h3>
+
+<p>The front of the site lists all upcoming events. Some may be part of a programme or series where it’s useful to know all the related events and if it is important to attend all of them.</p>
+
+<p>You can create a series by creating a series file and linking to it from each of the events which are part of it.</p>
+
+<p>Create a file inside the <strong>series folder</strong> of the Git repo with a useful name such as ‘open-geodata-programme.html’.</p>
+
+<p>Populate the file with ‘front matter’ and some text (you can use html or markdown for the text) which will introduce a listing of all the events linked to the series. Like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: series
+title: [Title of the overall series]
+description: [Short description of the series]
+permalink: /series/&lt;name-of-series&gt;
+---
+</code></pre></div></div>
+
+<p><strong>permalink</strong> should be used in the <strong>serieslink</strong> front matter of an event under the series.</p>
+:ET
