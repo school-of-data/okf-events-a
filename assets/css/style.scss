@@ -20,12 +20,31 @@ a{
     color: #000000;
 }
 
-.eventlisting{
+
+.event-details-key-info-panel-text-left, .event-details-key-info-panel-text-right{
+color: #8B9298
+}
+
+.event-details-key-info-panel-text-left{
+    font-weight: 400;
+}
+
+.event-details-key-info-panel-text-right{
+    font-weight: 200;
+}
+
+
+
+.eventlisting, .event-details-key-info-panel{
     background-color: #DDE3EA;
     border-radius: 5px;
     padding: 3% 4% !important;
 }
 
+.event-details-key-info-panel{
+    padding: 2% 4% !important;
+
+}
 .eventlisting-container{
     margin: 1% 0% 2% 0%;
 }
@@ -35,10 +54,27 @@ a{
     font-weight: 300;
 }
 
-.eventlisting-eventtitle{
+.eventlisting-eventtitle, #event_title, .event-details-title{
     color: #009AD6 !important;
     font-weight: 400 !important;
     font-size: 24px !important;
+}
+
+.event-details-title{
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    margin-bottom: 1%;
+}
+
+.before-event, .at-event, .aftersections{
+    border-radius: 5px;
+    border: 1px solid #009AD6;
+    padding: 2% 4% !important;
+    margin-bottom: 4%;
+}
+
+.event-panel-background{
+    padding: 2% 3%;
 }
 
 .btn-primary{
