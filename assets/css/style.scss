@@ -60,6 +60,29 @@ color: #8B9298
     font-size: 24px !important;
 }
 
+#event_title{
+    margin-bottom: 2% !important;
+}
+
+.event-details-h3{
+    color: #009AD6;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: 400 !important;
+}
+
+.at-event-h3, #event_structure > h3{
+    font-weight: 300 !important;
+    color: #009AD6;
+}
+
+
+#event_prerequisites > h4, #event_presurvey > h4, #event_agendashow > h4, #aftersections > h4, #event_preparation > h4, #event_materialsshow > h4{
+    color: #009AD6;
+    font-size: 1.2em;
+    font-weight: 300 !important;
+}
+
 .event-details-title{
     font-size: 20px !important;
     font-weight: 300 !important;
@@ -67,8 +90,8 @@ color: #8B9298
 }
 
 .before-event, .at-event, .aftersections{
-    border-radius: 5px;
-    border: 1px solid #009AD6;
+    border-radius: 1em;
+    border: 2px solid #009AD6;
     padding: 2% 4% !important;
     margin-bottom: 4%;
 }
@@ -125,7 +148,9 @@ a {
     color: #0087ca;
     text-decoration: none;
 }
-a::after {
+
+
+a:not(.footer-logo)::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -138,9 +163,20 @@ a::after {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-a:hover::after {
+a:not(.footer-logo):hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+
+.primary-nav a {
+    color: #FFF;
+}
+
+.primary-nav a:hover {
+    text-decoration: none;
+    color: #B1FFF1;
+    background-size: 0 0.1em, 100% 0.1em;
 }
 
 // ///////////////////////////
@@ -226,26 +262,6 @@ body {
 }
 
 
-.primary-nav a {
-    text-decoration: none;
-    color: #FFF;
-    // border-bottom: solid 0.15em #00d1ff;
-    background: 
-    linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
-    linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-}
-
-.primary-nav a:hover {
-    text-decoration: none;
-    color: #FFF;
-    border-bottom: solid 0.15em #64cef5;
-    background-size: 0 0.1em, 100% 0.1em;
-}
-
 .page-name {
     font-size: 2rem;
     font-weight: 900;
@@ -312,7 +328,7 @@ body {
 
 .site-footer .footer-primary .footer-links {
     position: relative;
-    width: 100%;
+    // width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin: 10px;
