@@ -2,7 +2,7 @@
 <html lang="{{ page.lang | default: " en-US" }}">
 
 <head>
-
+  
   {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -13,25 +13,47 @@
   </script>
   {% endif %}
   <meta charset="UTF-8">
-
+  
   {% seo %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#157878">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap-5.1.3/css/bootstrap.css' | append: site.github.build_revision | relative_url }}">
+  <!-- Bootstrap only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
   <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 </head>
 
 <body id="okf-events-a">
   <a id="skip-to-content" href="#content">Skip to the content.</a>
-
+  
   {% include header.html %}
-  <main id="content" class="container main" role="main">
-    <h1>{{ page.title | nothing }}</h1>
-    <p>{{ page.description | nothing }}</p>
-    {{ content }}
-  </main>
+  
+  <div id="content" class="container main" role="main">
+      <div class="row">
+        <!-- left pane -->
+        <div class="col-4">
+          <div class="row col-12">
+            <h3>OFK Training series</h3> 
+          </div>
+          {% assign serieslist = site.pages | where: "layout", "series" | sort %}
+          {% for node in serieslist %}
+            <div class="serieslisting">
+            <div class="serieslisting-title animate-a-blue"><a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a></div>
+            </div>
+          {% endfor %}
+        </div>
+        <!-- right pane -->
+        <div class="col-8">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  
   {% include footer.html %}
 </body>
 
+<!-- Bootstrap JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
