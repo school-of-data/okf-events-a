@@ -13,7 +13,7 @@ permalink: /series/
     {% for node in serieslist %}
     <div class="serieslisting">
         <div class="serieslisting-title">
-            <a class="" href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
         </div>
         {% assign eventlist = site.pages | where: page.series, node.title | sort: "date" | reverse %}
         {% for node in eventlist %}
@@ -30,7 +30,7 @@ permalink: /series/
                     </p>
                 </p>
                 <p class="eventlisting-eventdescription">{{ node.description }}</p>
-                <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+                <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
             </div>
         </div>
         {% endif %}

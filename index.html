@@ -18,14 +18,14 @@ description: Upcoming and past training events from Open Knowledge activities an
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
             <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
-            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a></span>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
             <p>
                 <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
                 <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
             </p>
         </p>
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
         <!-- {% if node.series %} -->
         <!-- <p class="eventlisting-seriestitle">
             An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
@@ -50,7 +50,7 @@ description: Upcoming and past training events from Open Knowledge activities an
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
             <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
-            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a></span>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
             <p>
                 <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
                 <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
