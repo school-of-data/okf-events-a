@@ -1,60 +1,80 @@
 keyInformation:
   en: "Key information"
   es: "Información clave"
+  pt: "Informações importantes"
 date:
   en: "Date"
   es: "Fecha"
+  pt: "Data"
 time:
   en: "Time"
   es: "Hora"
+  pt: "Horário"
 location:
   en: "Location"
   es: "Ubicación"
+  pt: "Localização"
 eventLanguage:
   en: "Event Language"
   es: "Idioma del evento"
+  pt: "Idioma do evento"
 costs:
   en: "Costs"
   es: "Costos"
+  pt: "Custos"
 organiser:
   en: "Organiser"
   es: "Organizador"
+  pt: "Organizador"
 childcare:
   en: "Childcare"
-  es: "cuidado de niños"
+  es: "Cuidado de Niños"
+  pt: "Cuidado infantil"
 access:
   en: "Access"
   es: "Acceso"
+  pt: "Acesso"
 prerequisites:
   en: "Prerequisites"
-  es: "Prerrequisitos"
+  es: "Pre-requisitos"
+  pt: "Pré-requisitos"
 eventPreparation:
   en: "Preparing for the event"
   es: "Preparándose para el evento"
+  pt: "Preparando-se para o evento"
 codeOfConduct:
   en: "Code of Conduct"
-  es: "Código de conducta"
+  es: "Código de Conducta"
+  pt: "Código de Conduta"
 governance1:
   en: "All Open Knowledge Foundation activities are governed by our"
   es: "Todas las actividades de la Open Knowledge Foundation se rigen por nuestra"
+  pt: "Todas as atividades da Open Knowledge Foundation são regidas por nosso"
 governance2:
   en: "Agreeing to conform to this is a condition of participating in our activities."
   es: "Aceptar cumplir con esto es una condición de participar en nuestras actividades."
+  pt: "Estar de acordo com isso é uma condição para participar de nossas atividades."
 atTheEvent:
   en: "At The Event"
   es: "En El Evento"
+  pt: "No Evento"
 agenda:
   en: "Agenda"
   es: "Agenda"
+  pt: "Agenda"
 promptsDuringTheEvent:
-  en: "Prompts During The Event"
+  en: "During The Event"
   es: "Indicaciones durante el evento"
+  pt:
 whatWeDidAndWhatWeLearned:
   en: "What we did and what we learned"
   es: "Lo que hicimos y lo que aprendimos"
+  pt: "O que fizemos e o que aprendemos"
 learningResources:
   en: "Learning resources"
   es: "Recursos de aprendizaje"
+  pt: "Learning resources"
 eventOutputs:
-  en: "Event Outputs"
-  es: "Salidas de Eventos"
+  en: "Event outputs"
+  es: "Salidas de eventos"
+  pt: "Saídas de eventos"

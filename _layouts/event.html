@@ -37,10 +37,10 @@
       <div class="col-1"></div>
       <div class="col-10">
         <div class="event-okf-strapline">A course from Open Knowledge Foundation</div>
-        <div id="event_title"></div>   
-        <!-- {% if page.series %}
-          <div class="series-title">An event in the <span class="series"><ahref="{{ site.baseurl }}{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</div>
-          {% endif %} -->
+        <h3 id="event_title"></h3>   
+        {% if page.series %}
+          <div class="series-title">An event in the <span class="series"><a href="{{ site.baseurl }}{{ page.serieslink }}"><span>{{ page.series }}</span></a></span> series</div>
+        {% endif %}
           
           <div><strong id="event_summary"></strong>
             <div id="event_livestreamshow">
@@ -95,7 +95,7 @@
             <div id="event_preparation"></div>
             <h3 class="event-details-h3">{{site.data.translations['codeOfConduct'][page.lang]}}</h3>
             <p>{{site.data.translations['governance1'][page.lang]}} <a
-              href="https://okfn.org/about/code-of-conduct/">{{site.data.translations['codeOfConduct'][page.lang]}}</a> {{site.data.translations['governance2'][page.lang]}}. </p>
+              href="https://okfn.org/about/code-of-conduct/">{{site.data.translations['codeOfConduct'][page.lang]}}</a>. {{site.data.translations['governance2'][page.lang]}}. </p>
           </div>
 
           <!--  -->
