@@ -6,7 +6,7 @@ permalink: /open-geodata-programme/mexico-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2021-06-24
-publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vSc6ElJCQKKDAU-Rk0l5rFqV_ikBkS5-P7M7k6JW7OQetUVursJVpgZVZHy7XG5aPLeQzFhf_wD5IhD/pub?gid=0&single=true&output=csv
+publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vTGBuMYo_ZfQSku7WWE_c2YEhE313WW8T6I0CUxi1DZikDFNckhsqVnx8IxbGmSgZUUguWCSYZdKFhb/pub?output=csv
 lang: es
 location: Mexico
 ---

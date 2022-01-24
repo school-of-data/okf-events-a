@@ -55,17 +55,21 @@ governance2:
   es: "Aceptar cumplir con esto es una condición de participar en nuestras actividades."
   pt: "Estar de acordo com isso é uma condição para participar de nossas atividades."
 atTheEvent:
-  en: "At The Event"
-  es: "En El Evento"
-  pt: "No Evento"
+  en: "During the event"
+  es: "Durante el evento"
+  pt: "Durante o evento"
+preTrainingSurveys:
+  en: "Pre-training surveys"
+  es: "Encuesta previa al entrenamiento"
+  pt: "Pesquisa pré-treinamento"
 agenda:
   en: "Agenda"
   es: "Agenda"
   pt: "Agenda"
-promptsDuringTheEvent:
-  en: "During The Event"
-  es: "Indicaciones durante el evento"
-  pt:
+eventRetrospective:
+  en: "Event reptrospective"
+  es: "Retrospectiva de eventos"
+  pt: "Retrospectiva do evento"
 whatWeDidAndWhatWeLearned:
   en: "What we did and what we learned"
   es: "Lo que hicimos y lo que aprendimos"

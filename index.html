@@ -4,12 +4,16 @@ title: Open Knowledge events
 description: Upcoming and past training events from Open Knowledge activities and programmes.
 ---
 
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" %}
+{% capture now %}{{"now" | date: "%s" | plus: 0 %}}{% endcapture %}
+
 <div class="right-pane-title row col-12">
     <h3>OKF current and upcoming events</h3>
 </div>
 
-{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" %}
-{% capture now %}{{"now" | date: "%s" | plus: 0 %}}{% endcapture %}
+{% capture lastdate %}{{eventlist.last.date | date: "%s" | plus: 0 %}}{% endcapture %}
+{% if lastdate >= now %}
+
 {% for node in eventlist %}
 {% capture date %}{{node.date | date: "%s" | plus: 0 %}}{% endcapture %}
 {% if date >= now %}
@@ -36,6 +40,16 @@ description: Upcoming and past training events from Open Knowledge activities an
 {% endif %}
 {% endif %}
 {% endfor %}
+
+{% else %}
+<div class="row eventlisting-container">
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+            <span class="eventlisting-eventtitle">No current or upcoming events.</span></p>
+    </div>
+</div>
+
+{% endif %}
 
 
 <h3>OKF past events</h3>

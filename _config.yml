@@ -3,3 +3,7 @@ title: Open Knowledge Foundation Training
 description: Details of training provided by or relevant to Open Knowledge.
 github: [metadata]
 baseurl: /okf-events-a
+
+site:
+  # default language
+  lang: "en"  
