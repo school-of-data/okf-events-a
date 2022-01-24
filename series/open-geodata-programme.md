@@ -7,7 +7,7 @@ permalink: /series/open-geodata-programme/
 
 ### Context 
 
-Last year, Facebook publicly released  the world’s most accurate population density maps for 170+ countries, built with satellite imagery and projected census data. This data has already had impact on life-saving service delivery, such as during the 2016-2017 measles and rubella campaign in Malawi, where the data allowed Missing Maps Program volunteers to reach  95% of children under five with vaccinations. Today these maps are used around the world to help plan local electricity grids, analyse hospital accessibility, or deploy COVID19 interventions. 
+Last year, Meta publicly released  the world’s most accurate population density maps for 170+ countries, built with satellite imagery and projected census data. This data has already had impact on life-saving service delivery, such as during the 2016-2017 measles and rubella campaign in Malawi, where the data allowed Missing Maps Program volunteers to reach  95% of children under five with vaccinations. Today these maps are used around the world to help plan local electricity grids, analyse hospital accessibility, or deploy COVID19 interventions. 
 
 There are vast opportunities for civil servants and non-profits to make use of this public data to improve the delivery of a variety of projects, from vaccination campaigns to pandemic response to infrastructure planning. With a little bit of training and support, civil servants could become much more efficient at using geographical data and tools, thereby multiplying the impact of their agencies on the populations they serve. 
 
@@ -15,11 +15,11 @@ There are vast opportunities for civil servants and non-profits to make use of t
 ### Objectives
 
 Objectives
-To address this need, Facebook’s Data for Good team has partnered with the Open Knowledge Foundation to design a free and open source geographical information system (GIS) training programme for governments around the world. The programme will aim to:
+To address this need, Meta’s Data for Good team has partnered with the Open Knowledge Foundation to design a free and open source geographical information system (GIS) training programme for governments around the world. The programme will aim to:
  
 - Raise awareness about the free GIS resources available to governments
 - Teach participants the skills needed to use these resources for public health and disaster response 
-- Familiarize governments with Facebook’s Population Density Map for their country
+- Familiarize governments with Meta’s Population Density Map for their country
 - Create space for governments to innovate in their practices by making use of data
 
 
@@ -47,7 +47,7 @@ The projects that participants take on during the mentoring phase will be decide
 
 ### The team
 
-**Facebook’s Data For Good** team makes data available to researchers, non profits, and the public sector, enabling them to address some of the world’s greatest humanitarian issues. Our partners leverage this data to address disaster response, health, connectivity, energy access, and economic growth. Privacy is built into all of our products by default; we use techniques such as aggregation and differential privacy to protect privacy. We have public datasets which are available on the Humanitarian Data Exchange, and private datasets which are only available to vetted non profits and researchers. 
+**Meta’s Data For Good** team makes data available to researchers, non profits, and the public sector, enabling them to address some of the world’s greatest humanitarian issues. Our partners leverage this data to address disaster response, health, connectivity, energy access, and economic growth. Privacy is built into all of our products by default; we use techniques such as aggregation and differential privacy to protect privacy. We have public datasets which are available on the Humanitarian Data Exchange, and private datasets which are only available to vetted non profits and researchers. 
 
 
 **Open Knowledge Foundation (OKF)** is a global non-profit organisation focused on realising open data’s value to society by helping individuals and organisations access and use data to take action on social problems. OKF coordinates several global networks of non-profits and individuals aligned with its mission, including School of Data, a network of data trainers spanning more than 30 countries.
