@@ -17,19 +17,26 @@ There are vast opportunities for civil servants and non-profits to make use of t
 Objectives
 To address this need, Meta’s Data for Good team has partnered with the Open Knowledge Foundation to design a free and open source geographical information system (GIS) training programme for governments around the world. The programme will aim to:
  
-- Raise awareness about the free GIS resources available to governments
-- Teach participants the skills needed to use these resources for public health and disaster response 
-- Familiarize governments with Meta’s Population Density Map for their country
-- Create space for governments to innovate in their practices by making use of data
+ - Raise awareness about free and open GIS and geospatial resources available to governments and nonprofits;
+ - Teach participants the skills needed to use these resources for public health and disaster response;
+ - Familiarise participants with Meta’s High Resolution Settlement Layer; and
+ - Create space for participants to produce innovative projects relevant to their work with the help of free and open data and software.
 
 
 ### The Training
 
-The training programme will be split into two phases, both delivered remotely: 
+The training programme utilises a unique two-phase format which includes a live training phase followed by a mentoring phase.
 
-- Two days of live sessions on Zoom where participants will learn about how to use, analyse and share geographical data in a public health and disaster response context
-- 4 weeks of mentoring, where participants will progress at their pace on small projects allowing them to apply what they’ve learned to their day to day work.
- 
+- The live training phase teaches participants how to think and solve problems geospatially using QGIS—a free and open source GIS—and other free and open geospatial resources. This usually lasts 2-3 days. 
+
+- The mentoring phase provides the participants the opportunity to learn specific skills, apply the things that they learned during the live training, and utilise these new skills and knowledge to complete a mapping or QGIS-related project that they can use in their day-to-day work. This usually lasts 4-6 weeks.
+
+This format addresses two challenges common to training programmes: 
+
+1. Attending a training does not translate easily into actionable skills: participants often leave frustrated because the time constraints of traditional trainings leave them unable to digest what they have learned
+
+2. Remote trainings make it more difficult to support participants who are lagging behind: the mentoring can be a place for participants to get additional explanations on topics they had trouble to follow
+
 
 The requested time commitment of the nominated participants will thus amount to over the course of five weeks--two days on Zoom and roughly one day per week over the 4 weeks of mentoring. Between 10 to 15 participants are expected. They will receive a certificate at the end of the training and gain access to a supplemental GIS curriculum to further their learning. Ideally, participants should be
 
