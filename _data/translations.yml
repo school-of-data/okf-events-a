@@ -34,6 +34,10 @@ access:
   en: "Access"
   es: "Acceso"
   pt: "Acesso"
+aboutTheEvent:
+  en: "About the event"
+  es: "Sobre el evento"
+  pt: "Sobre o evento"
 prerequisites:
   en: "Prerequisites"
   es: "Pre-requisitos"

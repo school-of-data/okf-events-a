@@ -86,18 +86,28 @@
           <div id="event_summary"></div>
         </div>
 
-        <!-- about the event -->
-        <div id="event_about_show">
-          <p id="event_about"></p>
-        </div>
-
-        <h4><strong>{{site.data.translations['codeOfConduct'][page.lang]}}</strong></h4>
-        <p>{{site.data.translations['governance1'][page.lang]}} <a
-          href="https://okfn.org/about/code-of-conduct/">{{site.data.translations['codeOfConduct'][page.lang]}}</a>. {{site.data.translations['governance2'][page.lang]}}.</p>
-
         <!-- pre, during, post training -->
         <br>
         <div class="accordion" id="event_accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingZero">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseZero" aria-expanded="false" aria-controls="panelsStayOpen-collapseZero">
+                <h3 class="event-details-h3">{{site.data.translations['aboutTheEvent'][page.lang]}}</h3>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseZero" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingZero">
+              <div class="accordion-body">
+                <!-- about the event -->
+                <div id="event_about_show">
+                  <p id="event_about"></p>
+                </div>
+
+                <h4><strong>{{site.data.translations['codeOfConduct'][page.lang]}}</strong></h4>
+                <p>{{site.data.translations['governance1'][page.lang]}} <a
+                  href="https://okfn.org/about/code-of-conduct/">{{site.data.translations['codeOfConduct'][page.lang]}}</a>. {{site.data.translations['governance2'][page.lang]}}.</p>
+              </div>
+            </div>
+          </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
