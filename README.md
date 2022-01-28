@@ -12,7 +12,7 @@ At the back end, adding a new event or series of events is accomplished by addin
 
 ### 1: Add a Google Sheet and publish it
 
-Open the Google Sheet event template at https://docs.google.com/spreadsheets/d/1joh7ZY165t5fp2DXa6F4T-z9a_cQbFeiYf3JtrLERAE/edit?usp=sharing and make a copy with the name of the event as its title.
+Open the Google Sheet event template at https://docs.google.com/spreadsheets/d/1fyCh1Vi0qadmfrZfGiYpmJgscoV4ES9TjQhSjHKyky4/edit?usp=sharing and make a copy with the name of the event as its title.
 
 Add information about the event following the basic guidance in the template. You can return later and complete any information that you don't have now and the webpage will be immediately updated.
 
@@ -20,7 +20,7 @@ Publish the Sheet through File > Publish to the web with settings 'main' and 'Co
 
 ### 2: Add a page to the site to hold the event data
 
-You will need permission to commit to the GitHub repository and permission to push commits or to make a pull request for approval. Talk to Cédric Lombion (cedric.lombion@okfn.org) if you need this to be set up for you.
+You will need permission to commit to the GitHub repository and permission to push commits or to make a pull request for approval. Talk to us (cedric.lombion@okfn.org or ben.hur.pintor@okfn.org) if you need this to be set up for you.
 
 It helps if you have a 'local' version of the site on your computer so that you can test and preview changes that you make before committing. If you are not familiar with setting up a local version of GitHub Pages see the instructions at https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.
 
