@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="container mt-4 pt-4">
+
+  {% assign serieslist = site.pages | where: "layout", "series" | sort: "title" %}
+      {% for node in serieslist %}
+        <div class="serieslisting">
+        <h3 class="serieslisting-title animate-a-blue"><a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a></h3>
+        </div>
+      {% endfor %}
+
+</div>
+      

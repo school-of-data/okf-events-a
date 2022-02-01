@@ -55,9 +55,9 @@ governance1:
   es: "Todas las actividades de la Open Knowledge Foundation se rigen por nuestra"
   pt: "Todas as atividades da Open Knowledge Foundation são regidas por nosso"
 governance2:
-  en: "Agreeing to conform to this is a condition of participating in our activities."
-  es: "Aceptar cumplir con esto es una condición de participar en nuestras actividades."
-  pt: "Estar de acordo com isso é uma condição para participar de nossas atividades."
+  en: "Agreeing to conform to this is a condition of participating in our activities"
+  es: "Aceptar cumplir con esto es una condición de participar en nuestras actividades"
+  pt: "Estar de acordo com isso é uma condição para participar de nossas atividades"
 atTheEvent:
   en: "During the event"
   es: "Durante el evento"

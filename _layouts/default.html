@@ -1,63 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: " en-US" }}">
+<html lang="{{ page.lang | default: site.lang }}">
 
-<head>
-  
-  {% if site.google_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-  {% endif %}
-  <meta charset="UTF-8">
-  
-  {% seo %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/bootstrap-5.1.3/css/bootstrap.css' | append: site.github.build_revision | relative_url }}">
-  
-  <!-- Bootstrap only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
-
-</head>
+{% include head.html %}
 
 <body id="okf-events-a">
   <a id="skip-to-content" href="#content">Skip to the content.</a>
   
   {% include header.html %}
   
-  <div id="content" class="container main" role="main">
-      <div class="row">
-        <!-- left pane -->
-        <div class="col-4">
-          <div class="row col-12">
-            <h3>OFK Training series</h3> 
-          </div>
-          {% assign serieslist = site.pages | where: "layout", "series" | sort %}
-          {% for node in serieslist %}
-            <div class="serieslisting">
-            <div class="serieslisting-title animate-a-blue"><a href="{{ site.baseurl }}{{ node.permalink }}">{{ node.title }}</a></div>
-            </div>
-          {% endfor %}
-        </div>
-        <!-- right pane -->
-        <div class="col-8">
-          {{ content }}
-        </div>
-      </div>
-    </div>
+  {{ content }}
   
   {% include footer.html %}
 </body>
 
-<!-- Bootstrap JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

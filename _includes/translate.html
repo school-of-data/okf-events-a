@@ -1,0 +1,126 @@
+<script type='text/javascript'>
+    var publicSpreadsheetUrl = '{{ page.publicSpreadsheetUrl }}';
+    
+    function init() {
+      Papa.parse(publicSpreadsheetUrl, {
+        download: true,
+        header: true,
+        complete: showInfo
+      })
+    }
+    
+    function showInfo(results) {
+      let data = results.data
+      data.forEach(function (data) {
+        // dates transferred as text: need as dates to be evaluated in front-page listing for ordering events
+  
+        // event title
+        event_title.innerHTML = data.event_title;
+  
+        // livestream link
+        if (data.event_livestream_show == "TRUE") {
+          event_livestream.innerHTML = data.event_livestream
+        }
+        else {
+          document.getElementById("event_livestream_show").style.display = "none";
+        }
+  
+        // info panel
+        event_startdate.innerHTML = data.event_startdate;
+        if (data.event_enddate > "") {
+          event_enddate.innerHTML = data.event_enddate;
+        } else {
+          document.getElementById("event_enddateshow").style.display = "none";
+        }
+        event_time.innerHTML = data.event_time;
+        event_location.innerHTML = data.event_location;
+        event_language.innerHTML = data.event_language;
+        event_costs.innerHTML = data.event_costs;
+        event_organiser.innerHTML = data.event_organiser;
+        event_childcare.innerHTML = data.event_childcare;
+        event_access.innerHTML = data.event_access;
+  
+        // event summary
+        if (data.event_summary_show == "TRUE") {
+          event_summary.innerHTML = data.event_summary;
+        }
+        else {
+          document.getElementById("event_summary_show").style.display = "none";
+        }
+  
+        // about the event
+        if (data.event_about_show == "TRUE") {
+          event_about.innerHTML = data.event_about;
+        }
+        else {
+          document.getElementById("event_about_show").style.display = "none";
+        }
+  
+        // pre, during, post training
+        if (data.event_presurvey_show == "TRUE") {
+          event_presurvey.innerHTML = data.event_presurvey;
+        }
+        else {
+          document.getElementById("event_presurvey_show").style.display = "none";
+        }
+  
+        if (data.event_preparation_show == "TRUE") {
+          event_preparation.innerHTML = data.event_preparation;
+        }
+        else {
+          document.getElementById("event_preparation_show").style.display = "none";
+        }
+  
+        if (data.event_agenda_show == "TRUE") {
+          event_agenda.innerHTML = data.event_agenda;
+        }
+        else {
+          document.getElementById("event_agenda_show").style.display = "none";
+        }
+  
+        if (data.event_structure_show == "TRUE") {
+          event_structure.innerHTML = data.event_structure;
+        }
+        else {
+          document.getElementById("event_structure_show").style.display = "none";
+        }
+  
+        if (data.event_materials_show == "TRUE") {
+          event_materials.innerHTML = data.event_materials;
+        }
+        else {
+          document.getElementById("event_materials_show").style.display = "none";
+        }
+  
+        if (data.event_during_show == "TRUE") {
+          event_during.innerHTML = data.event_during;
+        }
+        else {
+          document.getElementById("event_during_show").style.display = "none";
+        }
+  
+        if (data.event_resources_show == "TRUE") {
+          event_resources.innerHTML = data.event_resources;
+        }
+        else {
+          document.getElementById("event_resources_show").style.display = "none";
+        }
+  
+        if (data.event_outputs_show == "TRUE") {
+          event_outputs.innerHTML = data.event_outputs;
+        }
+        else {
+          document.getElementById("event_outputs_show").style.display = "none";
+        }
+  
+        if (data.event_retrospective_show == "TRUE") {
+          event_retrospective.innerHTML = data.event_retrospective;
+        }
+        else {
+          document.getElementById("event_retrospective_show").style.display = "none";
+        }
+      });
+    }
+    
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
