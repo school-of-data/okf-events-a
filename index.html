@@ -48,9 +48,48 @@ description: Upcoming and past training events from Open Knowledge activities an
             <span class="eventlisting-eventtitle">No current or upcoming events.</span></p>
     </div>
 </div>
-
 {% endif %}
 
+<h3>OKF events being planned</h3>
+
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
+{% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
+{% capture lastdate %}{{eventlist.last.date | date: "%s" | plus: 0 }}{% endcapture %}
+{% if lastdate == "0" %}
+{% for node in eventlist %}
+{% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
+{% if date == "0" %}
+{% if node.layout == "event" %}
+<div class="row eventlisting-container">
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+            <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
+            <p>
+                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f; margin-left:0";>{{ node.location }}</span>
+            </p>
+        </p>
+        <p class="eventlisting-eventdescription">{{ node.description }}</p>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <!-- {% if node.series %}
+        <p class="eventlisting-seriestitle">
+            An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
+        </p> -->
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% else %}
+<div class="row eventlisting-container">
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+            <span class="eventlisting-eventtitle">No events being planned.</span></p>
+    </div>
+</div>
+{% endif %}
 
 <h3>OKF past events</h3>
 
@@ -58,7 +97,7 @@ description: Upcoming and past training events from Open Knowledge activities an
 {% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
 {% for node in eventlist %}
 {% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
-{% if date < now %}
+{% if date < now and date !="0" %}
 {% if node.layout == "event" %}
 <div class="row eventlisting-container">
     <div class="eventlisting">
@@ -72,7 +111,6 @@ description: Upcoming and past training events from Open Knowledge activities an
         </p>
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
         <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
-       
         <!-- {% if node.series %}
         <p class="eventlisting-seriestitle">
             An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
