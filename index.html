@@ -13,7 +13,6 @@ description: Upcoming and past training events from Open Knowledge activities an
 
 {% capture lastdate %}{{eventlist.last.date | date: "%s" | plus: 0 }}{% endcapture %}
 {% if lastdate >= now %}
-
 {% for node in eventlist %}
 {% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
 {% if date >= now %}
@@ -95,10 +94,15 @@ description: Upcoming and past training events from Open Knowledge activities an
 
 {% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
 {% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
+{% assign i = 0 %}
 {% for node in eventlist %}
+{% if i>=10 %}
+{% break %}
+{% endif %}
 {% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
 {% if date < now and date !="0" %}
 {% if node.layout == "event" %}
+{% assign i=i | plus:1 %}
 <div class="row eventlisting-container">
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
@@ -120,4 +124,8 @@ description: Upcoming and past training events from Open Knowledge activities an
 </div>
 {% endif %}
 {% endif %}
+{% endfor %}
+{% assign pagelist = site.pages | where: "permalink", "/allevents" %}
+{% for node in pagelist%}
+<a class="btn btn-dark btn-sm active mx-xxl" style="margin-left: 50%; background: #DDE3EA; color: #22B7F8; padding: 10px 10px;" role="button" aria-pressed="true"  href="{{ site.baseurl }}{{ node.permalink }}">View all events</a>
 {% endfor %}

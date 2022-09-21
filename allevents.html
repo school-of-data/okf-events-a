@@ -1,0 +1,41 @@
+---
+layout: default-sidebar
+title: Open Knowledge events
+description: Upcoming and past training events from Open Knowledge activities and programmes.
+permalink: /allevents
+---
+
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" %}
+{% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
+
+<div class="right-pane-title row col-12">
+    <h3>OKF all training events</h3>
+</div>
+{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
+{% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
+{% for node in eventlist %}
+{% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
+{% if date %}
+{% if node.layout == "event" %}
+<div class="row eventlisting-container">
+    <div class="eventlisting">
+        <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
+            <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
+            <p>
+                <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
+                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
+            </p>
+        </p>
+        <p class="eventlisting-eventdescription">{{ node.description }}</p>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <!-- {% if node.series %}
+        <p class="eventlisting-seriestitle">
+            An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
+        </p> -->
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endif %}
+{% endfor %}
