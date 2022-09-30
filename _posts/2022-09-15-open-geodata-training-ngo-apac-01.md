@@ -6,6 +6,8 @@ permalink: /open-geodata-programme/2022/09/ngo-apac-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2022-09-15
+tags: [QGIS, GeoData, NGO]
+region: Asia
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vQBSzALM4ZzHjdxjZu3vx2fW0pq9hAsejtUE87OMF-RQ2wJAiKQIT0_uCU_7i3ADc21T0rFG5K_zpKz/pub?gid=0&single=true&output=csv
 lang: en
 location: Online
