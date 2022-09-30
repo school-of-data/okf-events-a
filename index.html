@@ -3,14 +3,11 @@ layout: default-sidebar
 title: Open Knowledge events
 description: Upcoming and past training events from Open Knowledge activities and programmes.
 ---
-
-{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" %}
+{% assign eventlist = site.posts | sort: "date" | reverse %}
 {% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
-
 <div class="right-pane-title row col-12">
     <h3>OKF current and upcoming events</h3>
 </div>
-
 {% capture lastdate %}{{eventlist.last.date | date: "%s" | plus: 0 }}{% endcapture %}
 {% if lastdate >= now %}
 {% for node in eventlist %}
@@ -21,14 +18,17 @@ description: Upcoming and past training events from Open Knowledge activities an
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
             <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
-            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
-            <p>
-                <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
-                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
-            </p>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}"
+                    class="eventlisting-eventtitle">{{ node.title }}</a></span>
+        <p>
+            <span class="eventlisting-eventdate" style="font-size: large; color: #4F4F4F">{{ node.date | date: "%d %B
+                %Y" }}</span>
+            <span class="eventlisting-eventlocation" style="font-size: large; color: #4F4F4F">{{ node.location }}</span>
+        </p>
         </p>
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true"
+            href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
         <!-- {% if node.series %} -->
         <!-- <p class="eventlisting-seriestitle">
             An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
@@ -39,19 +39,17 @@ description: Upcoming and past training events from Open Knowledge activities an
 {% endif %}
 {% endif %}
 {% endfor %}
-
 {% else %}
 <div class="row eventlisting-container">
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
-            <span class="eventlisting-eventtitle">No current or upcoming events.</span></p>
+            <span class="eventlisting-eventtitle">No current or upcoming events.</span>
+        </p>
     </div>
 </div>
 {% endif %}
-
 <h3>OKF events being planned</h3>
-
-{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
+{% assign eventlist = site.posts | sort: "date" | reverse %}
 {% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
 {% capture lastdate %}{{eventlist.last.date | date: "%s" | plus: 0 }}{% endcapture %}
 {% if lastdate == "0" %}
@@ -63,13 +61,16 @@ description: Upcoming and past training events from Open Knowledge activities an
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
             <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
-            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
-            <p>
-                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f; margin-left:0";>{{ node.location }}</span>
-            </p>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}"
+                    class="eventlisting-eventtitle">{{ node.title }}</a></span>
+        <p>
+            <span class="eventlisting-eventlocation" style="font-size: large; color: #4F4F4F; margin-left:0" ;>{{
+                node.location }}</span>
+        </p>
         </p>
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true"
+            href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
         <!-- {% if node.series %}
         <p class="eventlisting-seriestitle">
             An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
@@ -80,52 +81,52 @@ description: Upcoming and past training events from Open Knowledge activities an
 {% endif %}
 {% endif %}
 {% endfor %}
-
 {% else %}
 <div class="row eventlisting-container">
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
-            <span class="eventlisting-eventtitle">No events being planned.</span></p>
+            <span class="eventlisting-eventtitle">No events being planned.</span>
+        </p>
     </div>
 </div>
 {% endif %}
-
 <h3>OKF past events</h3>
-
-{% assign eventlist = site.pages | where: "layout", "event" | sort: "date" | reverse %}
+{% assign eventlist = site.posts | sort: "date" | reverse %}
 {% capture now %}{{"now" | date: "%s" | plus: 0 }}{% endcapture %}
 {% assign i = 0 %}
+{% assign last = 10 %}
 {% for node in eventlist %}
-{% if i>=10 %}
+{% if i>= last %}
 {% break %}
 {% endif %}
 {% capture date %}{{node.date | date: "%s" | plus: 0 }}{% endcapture %}
-{% if date < now and date !="0" %}
-{% if node.layout == "event" %}
-{% assign i=i | plus:1 %}
-<div class="row eventlisting-container">
+{% if date < now and date !="0" %} {% if node.layout=="event" %} {% assign i=i | plus:1 %} <div
+    class="row eventlisting-container">
     <div class="eventlisting">
         <p class="eventlisting-eventdateandtitle" style="margin-top: 0px">
             <!-- <span class="eventlisting-eventtitle">{{ node.title }}</span> -->
-            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}" class="eventlisting-eventtitle">{{ node.title }}</a></span>
-            <p>
-                <span class="eventlisting-eventdate" style="font-size: large; color: #4f4f4f">{{ node.date | date: "%d %B %Y" }}</span>
-                <span class="eventlisting-eventlocation" style="font-size: large; color: #4f4f4f">{{ node.location }}</span>
-            </p>
+            <span class="eventlisting-eventtitle"><a href="{{ site.baseurl }}{{ node.permalink }}"
+                    class="eventlisting-eventtitle">{{ node.title }}</a></span>
+        <p>
+            <span class="eventlisting-eventdate" style="font-size: large; color: #4F4F4F">{{ node.date | date: "%d %B
+                %Y" }}</span>
+            <span class="eventlisting-eventlocation" style="font-size: large; color: #4F4F4F">{{ node.location }}</span>
+        </p>
         </p>
         <p class="eventlisting-eventdescription">{{ node.description }}</p>
-        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
+        <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true"
+            href="{{ site.baseurl }}{{ node.permalink }}">Details</a>
         <!-- {% if node.series %}
         <p class="eventlisting-seriestitle">
             An event in the <a href="{{ site.baseurl }}{{ node.serieslink }}">{{ node.series }}</a> series.
         </p> -->
         {% endif %}
     </div>
-</div>
-{% endif %}
-{% endif %}
-{% endfor %}
-{% assign pagelist = site.pages | where: "permalink", "/allevents" %}
-{% for node in pagelist%}
-<a class="btn btn-dark btn-sm active mx-xxl" style="margin-left: 50%; background: #DDE3EA; color: #22B7F8; padding: 10px 10px;" role="button" aria-pressed="true"  href="{{ site.baseurl }}{{ node.permalink }}">View all events</a>
-{% endfor %}
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    <a role="button" aria-pressed="true"
+    style="margin-left: 40%; color: #fff; background: #22B7F8; padding: 4px 16px; border-radius:8px;  font-size:18px;"
+    href="{{ site.baseurl }}/events/">View
+    all events</a>
