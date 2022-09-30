@@ -1,0 +1,30 @@
+{% if paginator.total_pages > 1 %}
+<div style="text-align:center">
+    {% if paginator.previous_page %}
+    <a class="ml-1 mr-1 pe-2 reverse-bnhr-link font-weight-bold h6 "
+        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: " //", "/" }}"
+        style="color:#22B7F8">&laquo; Prev</a>
+    {% else %}
+    <span class="text-secondary font-weight-bold h6 ">&laquo; Prev</span>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <span class="ml-1 mr-1 pe-2 text-secondary font-weight-bold h6">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a class="ml-1 mr-1 pe-2 reverse-bnhr-link font-weight-bold h6" href="{{ site.baseurl }}/events/index.html"
+        style="color:#22B7F8">{{ page
+        }}</a>
+    {% else %}
+    <a class="ml-1 mr-1 pe-2 reverse-bnhr-link font-weight-bold h6"
+        href="{{ site.baseurl }}/{{ site.paginate_path | replace: " //", "/" | replace: ":num" , page }}"
+        style="color:#22B7F8">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+    <a class="ml-1 mr-1 pe-2 reverse-bnhr-link font-weight-bold h6" style="color:#22B7F8"
+        href="{{ paginator.next_page_path | prepend: site.baseurl | replace: " //", "/" }}">Next &raquo;</a>
+    {% else %}
+    <span class="text-secondary font-weight-bold h6">Next &raquo;</span>
+    {% endif %}
+</div>
+{% endif %}
