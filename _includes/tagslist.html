@@ -1,0 +1,28 @@
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+{% assign posttags = post.tags | join:"|" | append:"|" %}
+{% assign rawtags = rawtags | append:posttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:"|" | sort %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+{% if tag != "" %}
+{% if tags == "" %}
+{% assign tags = tag | split:"|" %}
+{% endif %}
+{% unless tags contains tag %}
+{% assign tags = tags | join:"|" | append:"|" | append:tag | split:"|" %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+<div class="pt-1">
+    <p>
+    <h3>Tags</h3>
+    {% for tag in tags %}
+    <a href="{{ site.baseurl }}/events/tags.html#{{ tag | slugify }}"
+        class="small post-meta-tag m-0.5 mt-2 no-underline-link"
+        style="border:1px solid #22B7F8; border-radius:10px; padding:2px 8px;">
+        {{
+        tag }} </a>
+    {% endfor %}
+</div>
