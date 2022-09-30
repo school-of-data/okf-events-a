@@ -1,0 +1,23 @@
+---
+layout: sidebar-filter
+title: Open Knowledge events
+description: Upcoming and past training events from Open Knowledge activities and programmes.
+---
+<h3 class="color-primary-dark p-0 fw-normal">Total OKF
+    Training Events
+</h3>
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="Search events..."
+        style="border: 2px solid #22B7F8; width:80%; border-radius:10px; padding:5px;">
+    <ul id="results-container" style="list-style:none;"></ul>
+</div>
+{% include search_script.html %}
+{% include search.html %}
+<div>
+    <div class="pb-4">
+        {% include paginated-posts.html %}
+    </div>
+    <div class="pb-4">
+        {% include pagination.html %}
+    </div>
+</div>
