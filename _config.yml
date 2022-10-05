@@ -3,7 +3,5 @@ title: Open Knowledge Foundation Training Events
 description: Open Knowledge Foundation Training Events
 github: [metadata]
 baseurl: /okf-events-a
-plugins: [jekyll-paginate]
-paginate: 5
-paginate_path: "/events/page:num"
+
 lang: en

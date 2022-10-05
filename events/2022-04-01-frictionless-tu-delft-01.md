@@ -6,8 +6,6 @@ permalink: /frictionless-data/2022/05/tu-delft-01
 series: Frictionless Data
 serieslink: /series/frictionless-data/
 date: 2022-04-28
-tags: [QGIS, GeoData, Meta]
-region: Europe
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vSKFyZzSjHo5iZmvzo7QMHCMmq_DhAouq0IVS2jVD3MFZDfZaipnXOmzrxhVNhbSuj8UQpAUTjPvg3g/pub?output=csv
 lang: en
 location: Online

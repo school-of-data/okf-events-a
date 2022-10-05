@@ -6,8 +6,6 @@ permalink: /open-geodata-programme/2021/11/kenya-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2021-11-04
-tags: [QGIS, GeoData, Meta]
-region: Africa
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vSyhEp9D47cj-33LNMwKjkHvW0DFpl_5SkzmSprk_t42uNncdrz7Oiw8jLMl71a0yExOAjJlUmOt5tv/pub?output=csv
 lang: en
 location: Online
