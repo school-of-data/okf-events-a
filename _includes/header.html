@@ -2,12 +2,7 @@
   <div class="container">
     <nav class="primary-nav">
       <ul>
-        {% assign pagelist = site.pages | where: "permalink", "/allevents" %}
-        {% for node in pagelist%}
-        <!-- <li><a href="https://okfn.org">Open Knowledge homepage</a></li> -->
-        <li><a href="{{ site.baseurl }}{{ node.permalink }}">All training events</a></li>
-        <!-- <li><a href="{{ site.baseurl }}/series/">Series</a></li> -->
-        {% endfor %}
+        <li><a href="{{ site.baseurl }}/events">All training events</a></li>
       </ul>
     </nav>
     <a class="header-logo" href="{{ site.baseurl }}/">
