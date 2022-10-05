@@ -6,8 +6,6 @@ permalink: /open-geodata-programme/2021/11/ghana-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2021-11-04
-tags: [QGIS, GeoData, Meta]
-region: Africa
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vSPzCwiWNFnuE2rM72n_OzS8sss7-EMnMP6ybSdwp17ysWXja8jgNnnxa5ZZCPtEqd7wHxgPexWzaPQ/pub?output=csv
 lang: en
 location: Online

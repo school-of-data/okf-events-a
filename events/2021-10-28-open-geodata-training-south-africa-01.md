@@ -6,8 +6,6 @@ permalink: /open-geodata-programme/2021/10/south-africa-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2021-10-28
-tags: [QGIS, GeoData, Meta]
-region: Africa
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9mk4vtYhBzAIHQGT7b4D7SM-CPoZkMhUl_Z4eHytRAEQcEelAjn-vN-cg0vcPMfDX_qBn_SkuupLt/pub?output=csv
 lang: en
 location: Online

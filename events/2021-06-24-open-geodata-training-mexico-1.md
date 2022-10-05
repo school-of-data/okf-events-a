@@ -6,8 +6,6 @@ permalink: /open-geodata-programme/2021/06/mexico-01
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2021-06-24
-tags: [QGIS, GeoData, Meta]
-region: North America
 publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vTGBuMYo_ZfQSku7WWE_c2YEhE313WW8T6I0CUxi1DZikDFNckhsqVnx8IxbGmSgZUUguWCSYZdKFhb/pub?output=csv
 lang: es
 location: Online
