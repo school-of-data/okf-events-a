@@ -6,7 +6,7 @@ permalink: /open-geodata-programme/2022/11/ngo-emea-02
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2022-11-03
-publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vRotWmfH0ckv6SqkHnPeqIN7MfqBIm6WCCv_md2gRmVUbB4AIyqHac_RQn01MndUK6waC8H581yNXfa/pubhtml 
+publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vRotWmfH0ckv6SqkHnPeqIN7MfqBIm6WCCv_md2gRmVUbB4AIyqHac_RQn01MndUK6waC8H581yNXfa/pub?output=csv
 lang: en
 location: Online
 ---
