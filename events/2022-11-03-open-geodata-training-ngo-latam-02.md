@@ -2,7 +2,7 @@
 layout: event
 title: "Open Geodata Training for NGOs - LATAM 2"
 description: "Esta es una capacitación gratuita para ayudar al personal de la ONG a aprender cómo obtener, analizar y visualizar datos geográficos para respaldar el proyecto de impacto social. El programa se divide en dos fases, ambas impartidas de forma remota: dos días de sesiones en directo y cinco semanas de tutoría."
-permalink: /open-geodata-programme/2022/09/ngo-latam-02
+permalink: /open-geodata-programme/2022/11/ngo-latam-02
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2022-11-03
