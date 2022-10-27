@@ -6,7 +6,7 @@ permalink: /open-geodata-programme/2022/11/ngo-latam-02
 series: Open Geodata Training Programme
 serieslink: /series/open-geodata-programme/
 date: 2022-11-03
-publicSpreadsheetUrl:https://docs.google.com/spreadsheets/d/e/2PACX-1vQmevQ9tBwg1PMCh1p86f3xvDjb6_mEyVX7OEmnKYmQpHpSPpbXVC6sjpAsTiqNbRXr-RGwLPALc1P7/pub?output=csv
+publicSpreadsheetUrl: https://docs.google.com/spreadsheets/d/e/2PACX-1vQmevQ9tBwg1PMCh1p86f3xvDjb6_mEyVX7OEmnKYmQpHpSPpbXVC6sjpAsTiqNbRXr-RGwLPALc1P7/pub?output=csv
 lang: es
 location: Online
 ---
